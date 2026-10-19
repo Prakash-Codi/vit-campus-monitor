@@ -1,0 +1,144 @@
+{
+  "source": "Energy Audit Report (2020), p. 3; Green Audit Report (2023), p. 46; Environmental Audit Report (2024), pp. 9-11",
+  "substation": {
+    "incoming_voltage_kv": 33,
+    "main_transformers": "2 x 5 MVA (33 kV / 11 kV)",
+    "total_incoming_capacity_mva": 10
+  },
+  "internal_transformers_2020_summary": [
+    {
+      "capacity_kva": 2000,
+      "voltage": "11 kV / 433 V",
+      "quantity": 7,
+      "total_kva": 14000
+    },
+    {
+      "capacity_kva": 1000,
+      "voltage": "11 kV / 433 V",
+      "quantity": 10,
+      "total_kva": 10000
+    },
+    {
+      "capacity_kva": 950,
+      "voltage": "11 kV / 433 V",
+      "quantity": 1,
+      "total_kva": 950
+    },
+    {
+      "capacity_kva": 800,
+      "voltage": "11 kV / 433 V",
+      "quantity": 3,
+      "total_kva": 2400
+    },
+    {
+      "capacity_kva": 630,
+      "voltage": "11 kV / 433 V",
+      "quantity": 1,
+      "total_kva": 630
+    }
+  ],
+  "total_transformers_count_2020": 22,
+  "total_internal_transformer_capacity_kva_2020": 27980,
+  "power_houses_2023": [
+    {
+      "power_house": "University Power House",
+      "transformers": "2000 kVA x1, 1000 kVA x1",
+      "tr_capacity_kva": 3000,
+      "generators": "500 kVA x3, 810 kVA x1",
+      "dg_capacity_kva": 2310
+    },
+    {
+      "power_house": "Tech Tower Power House",
+      "transformers": "800 kVA x2",
+      "tr_capacity_kva": 1600,
+      "generators": "500 kVA x2, 250 kVA x1",
+      "dg_capacity_kva": 1250
+    },
+    {
+      "power_house": "East Campus Power House",
+      "transformers": "1000 kVA x3",
+      "tr_capacity_kva": 3000,
+      "generators": "500 kVA x3",
+      "dg_capacity_kva": 1500
+    },
+    {
+      "power_house": "PRP Power House",
+      "transformers": "2000 kVA x1",
+      "tr_capacity_kva": 2000,
+      "generators": "810 kVA x1",
+      "dg_capacity_kva": 810
+    },
+    {
+      "power_house": "Gandhi Block Power House",
+      "transformers": "950 kVA x1",
+      "tr_capacity_kva": 950,
+      "generators": "500 kVA x1",
+      "dg_capacity_kva": 500
+    },
+    {
+      "power_house": "Hostel Power House-1",
+      "transformers": "630 kVA x1, 800 kVA x1, 1000 kVA x2",
+      "tr_capacity_kva": 3430,
+      "generators": "500 kVA x2, 250 kVA x1",
+      "dg_capacity_kva": 1430
+    },
+    {
+      "power_house": "Hostel Power House-2",
+      "transformers": "1000 kVA x2",
+      "tr_capacity_kva": 2000,
+      "generators": "500 kVA x3",
+      "dg_capacity_kva": 1500
+    },
+    {
+      "power_house": "Hostel Power House-3",
+      "transformers": "1000 kVA x2",
+      "tr_capacity_kva": 2000,
+      "generators": "500 kVA x1, 650 kVA x1, 810 kVA x1",
+      "dg_capacity_kva": 1960
+    },
+    {
+      "power_house": "Home Land",
+      "transformers": "None",
+      "tr_capacity_kva": 0,
+      "generators": "250 kVA x1",
+      "dg_capacity_kva": 250
+    },
+    {
+      "power_house": "Railway Land Borewell Area",
+      "transformers": "None",
+      "tr_capacity_kva": 0,
+      "generators": "82.5 kVA x1",
+      "dg_capacity_kva": 82.5
+    },
+    {
+      "power_house": "MH Chiller Plant",
+      "transformers": "2000 kVA x2",
+      "tr_capacity_kva": 4000,
+      "generators": "None",
+      "dg_capacity_kva": 0
+    },
+    {
+      "power_house": "LH Chiller Plant",
+      "transformers": "2000 kVA x2",
+      "tr_capacity_kva": 4000,
+      "generators": "650 kVA x1",
+      "dg_capacity_kva": 650
+    }
+  ],
+  "dg_sets_2024_summary": {
+    "total_dg_units": 31,
+    "capacities_breakdown": {
+      "810 kVA": 5,
+      "650 kVA": 2,
+      "500 kVA": 15,
+      "250 kVA": 4,
+      "180 kVA": 1,
+      "140 kVA": 1,
+      "50 kVA": 1,
+      "40 kVA": 2
+    },
+    "total_dg_capacity_kva": 16930,
+    "fuel_stored_days_buffer": 7,
+    "stack_height_range_m": "3.0m to 24.0m"
+  }
+}

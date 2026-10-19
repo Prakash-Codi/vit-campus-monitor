@@ -1,0 +1,32 @@
+{
+  "source": "Environmental Audit Report (2024), pp. 7-10, 41-44; Green Audit Report (2023), pp. 41-45",
+  "water_supply": {
+    "total_water_requirement_kld": 7233,
+    "fresh_water_sourced_kld": 2692,
+    "fresh_sources": "TWAD Cauvery Combined Water Supply Scheme (5.0 lakh LPD consent) + 27 Campus Borewells & Open Wells (10.2 lakh LPD WRD NOC)",
+    "recycled_water_utilized_kld": 4541,
+    "recycled_fraction_pct": 62.78,
+    "recycled_water_use": "Toilet flushing (2,118 KLD) and campus landscape/gardening (2,423 KLD) via dual piping"
+  },
+  "sewage_treatment": {
+    "daily_sewage_generated_kld": 4541,
+    "total_stp_capacity_kld": 7500,
+    "number_of_plants": 9,
+    "monitoring": "Online Continuous Effluent Monitoring System (OCEMS) connected to TNPCB server",
+    "zero_discharge_commitment": "100% campus treated effluent reused internally; zero surface water discharge outside boundary"
+  },
+  "rainwater_harvesting": {
+    "harvesting_pits_count": 35,
+    "annual_rainfall_vellore_mm": 900,
+    "collection_structures": "UPVC/RCC hume pipes connecting rooftop drainage to 35 recharge bore pits + diversion of runoff into PWD VIT Lake",
+    "lake_role": "Central campus stormwater pond acts as permanent percolation tank and aesthetic microclimate moderator"
+  },
+  "waste_management": {
+    "biodegradable_waste_kg_day": 7373,
+    "biodegradable_disposal": "Cattle feed for surrounding rural villages, vermicomposting yard, and 300 m3 biomethanation plant powering 50 kVA and 40 kVA gas engines",
+    "non_biodegradable_waste_kg_day": 4916,
+    "non_biodegradable_disposal": "Source segregation (colour-coded bins on all floors) and recycling via authorized TNPCB vendors",
+    "hazardous_used_oil_tons_year": 4.5,
+    "e_waste_disposed_2024_kg": 2400
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "source": "Open-Meteo Air Quality & Weather API (Coordinates 12.9692 N, 79.1559 E)",
+  "timestamp": "2026-10-19T11:44:00Z",
+  "current_weather": {
+    "time": "2026-10-19T17:00",
+    "interval": 900,
+    "temperature_2m": 26.0,
+    "relative_humidity_2m": 91,
+    "apparent_temperature": 32.2,
+    "precipitation": 0.1,
+    "wind_speed_10m": 1.2
+  },
+  "current_air_quality": {
+    "time": "2026-10-19T16:30",
+    "interval": 3600,
+    "pm10": 5.4,
+    "pm2_5": 4.9,
+    "carbon_monoxide": 235.0,
+    "nitrogen_dioxide": 7.1,
+    "sulphur_dioxide": 2.3,
+    "ozone": 78.0,
+    "european_aqi": 29,
+    "us_aqi": 56
+  },
+  "co2_ambient_ppm_note": "Direct city-scale sensor CO2 ppm is unavailable from standard open meteorological APIs (global baseline ~421 ppm). Local point sources are modelled in hotspots_catalog.json.",
+  "cpcb_ambient_limits_comparison": {
+    "pm2_5_limit_annual_ug_m3": 40.0,
+    "pm10_limit_annual_ug_m3": 60.0,
+    "so2_limit_annual_ug_m3": 50.0,
+    "no2_limit_annual_ug_m3": 40.0,
+    "co_limit_8hr_mg_m3": 2.0,
+    "source": "TNPCB Consent Order No. 2307250173231, Table 3(b) (Env Audit Report p. 59)"
+  }
+}

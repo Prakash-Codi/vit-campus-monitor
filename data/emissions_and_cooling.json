@@ -1,0 +1,105 @@
+{
+  "source": "Energy Audit Report (2020), pp. 7-13; Green Audit Report (2023), pp. 52-55; Environmental Audit Report (2024), pp. 18-21",
+  "emission_factors": {
+    "energy_audit_2020_implied_kg_co2_per_kwh": 0.91,
+    "environmental_audit_2024_grid_factor_kg_co2_per_kwh": 0.813,
+    "cea_version_2023_southern_grid_weighted_avg_kg_per_kwh": 0.716,
+    "diesel_emission_factor_ton_co2_per_litre": 0.00333,
+    "petrol_emission_factor_ton_co2_per_litre": 0.00166,
+    "lpg_emission_factor_ton_co2_per_litre": 0.00152
+  },
+  "district_cooling_system": {
+    "total_installed_tr": 5500,
+    "chiller_units": "11 units of 500 TR",
+    "running_capacity_tr": 4500,
+    "refrigerant": "R134a (Zero ODP)",
+    "network": "Chilled water distribution network connecting academic blocks and Men's/Ladies' Hostels",
+    "savings_20_years": {
+      "energy_saved_kwh": 10988372,
+      "emissions_avoided_tons_co2": 30619.57,
+      "operating_cost_saved_inr": 88456395,
+      "social_cost_of_carbon_usd": 2633283,
+      "social_cost_of_carbon_inr": 195657403
+    },
+    "comparison_traditional_vs_dcs_20yr": {
+      "traditional_kwh": 26250000,
+      "dcs_kwh": 15261628,
+      "traditional_co2_kg": 59504250,
+      "dcs_co2_kg": 28884680
+    }
+  },
+  "gandhi_block_innovative_cooling": {
+    "system_components": [
+      "Radiant cooling through embedded pipe manifolds in concrete building slabs",
+      "Indirect Evaporative Cooling (IEC) providing conditioned low-humidity fresh air",
+      "District cooling integration for high-density seminar halls and research labs"
+    ],
+    "energy_consumption_benchmarks_kwh_per_sqm_year": {
+      "dx_split_units": 97.48,
+      "dx_duct_units": 94.41,
+      "vrf_systems": 69.23,
+      "central_chiller": 62.1,
+      "gandhi_innovative_system": 48.79
+    },
+    "annual_savings": {
+      "energy_kwh": 314160,
+      "emissions_avoided_tons_co2": 12.57,
+      "cost_inr": 2199120,
+      "pct_saving_vs_split": 50.0
+    }
+  },
+  "hot_water_systems": {
+    "technologies": [
+      "Solar Flat Plate Water Heaters",
+      "SES 12T Heat Pump Water Heaters",
+      "Electric Resistance Storage (Legacy)"
+    ],
+    "heat_pump_spec": {
+      "model": "SES 12T",
+      "cop": 4.0,
+      "input_power_kw": 12,
+      "heating_output_kw": 48,
+      "output_water_temp_c": 55,
+      "output_flow_lph": 1800,
+      "compressors": "2x Copeland Scroll"
+    },
+    "annual_savings_vs_conventional_electric": {
+      "energy_saved_kwh": 1529775,
+      "emissions_avoided_tons_co2": 1392.1,
+      "cost_saved_inr": 12314688.75,
+      "social_cost_of_carbon_inr": 8895210.23
+    }
+  },
+  "campus_co2_balance_annual": {
+    "sequestration_sinks_tons_per_year": {
+      "trees": {
+        "area_acres": 18.69,
+        "area_sqm": 75649,
+        "absorption_tons_co2": 1869.0,
+        "factor": "100 tons CO2 / acre"
+      },
+      "open_land": {
+        "area_sqm": 631928,
+        "absorption_tons_co2": 876.0,
+        "flux": "1.0e-6 mol / (sq.m * sec)"
+      },
+      "shrubs_and_lawns": {
+        "area_ha": 35.6,
+        "area_sqm": 355978,
+        "absorption_tons_co2": 69.44,
+        "factor": "1.95 tCO2 / ha / year"
+      },
+      "total_campus_carbon_absorption_tons": 2814.44
+    },
+    "gross_emissions_sources_tons_per_year_2024": {
+      "grid_electricity": 23968.0,
+      "diesel_generators_emergency": 765.9,
+      "transport_diesel": 942.58,
+      "petrol_vehicles": 12.81,
+      "canteen_lpg": 2525.0,
+      "total_fossil_fuel_combustion": 4246.29,
+      "total_gross_campus_emissions": 30757.0
+    },
+    "net_annual_emissions_tons_co2": 27942.85
+  }
+}

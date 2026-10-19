@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Method & Sources | VIT Vellore</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body data-page-id="nav-methods">
+  <div id="site-header-container"></div>
+
+  <main class="main-wrapper">
+    <div class="section-label">Section 07 — Scientific Integrity & Audit Trail</div>
+    <h1>Methodology, Mathematical Formulas & Sourced Data</h1>
+
+    <div class="lead-paragraph">
+      "This document articulates the complete empirical audit trail, mathematical models used to estimate building-level loads in the absence of room sensors, emission factor benchmarks, and known reporting quirks in published university audits."
+    </div>
+
+    <!-- Editorial Narrative -->
+    <div class="editorial-grid">
+      <div class="editorial-main">
+        <h2>1. Primary Source Audits & Legal Documentation</h2>
+        <p>
+          Every quantitative value presented across this monitor originates from one of four verified documentary sources:
+        </p>
+        <ul style="padding-left: 1.25rem; line-height: 1.7; font-size: 0.9rem;">
+          <li><strong>Energy Audit Report (Year 2020):</strong> Authored by Dr. K. Palanisamy (BEE Certified Energy Auditor EA3024, Associate Professor, Dept. of Energy and Power Electronics, School of Electrical Engineering, VIT). Covers 33 kV incoming lines, transformer allocations, 30-month billing ledgers (Jan 2019 – Jun 2021), 10-year generation history (2014–2021), and District Cooling engineering calculations.</li>
+          <li><strong>Green Audit Report (Period: June 2022 to August 2023):</strong> Prepared by Eco Services India Private Limited (NABET/QCI Accredited EIA Consultant No. NABET/EIA/24-27/RA 0332). Contains campus layout land classifications, tree species census, rooftop solar monitor telemetry, water usage registers, and 12-powerhouse equipment ledgers.</li>
+          <li><strong>Environmental Audit Report (Period: September 2023 to August 2024):</strong> Prepared by Eco Services India Private Limited. Provides statutory compliance documentation, TNPCB Consent to Operate (CTO Expansion Order No. 2307250173231), 31 DG set stack heights, 7,233 KLD water balance, and the 2024 certified greenhouse gas footprint.</li>
+          <li><strong>MDP Student Field Notes & Inspection:</strong> Campus observations documenting heavy lab power consumers (SMEC thermal rigs, SELECT machinery, CFM cleanrooms, CBST freezers) and point-source CO₂ combustion exhausts.</li>
+        </ul>
+
+        <h2>2. Mathematical Formulations & Modelling Logic</h2>
+        <p>
+          Because room-level and lab-level IoT energy sub-meters do not exist campus-wide, local hotspot intensities are transparently calculated using the following engineering approximations:
+        </p>
+
+        <h3>A. Electrical Load Estimation (kW)</h3>
+        <p>
+          For unmetered academic towers, peak electrical load \(P_{\text{est}}\) is estimated from connected transformer capacity and operational load factors:
+        </p>
+        <div style="background: var(--bg-subtle); padding: 0.85rem 1.25rem; font-family: var(--font-mono); font-size: 0.85rem; border-left: 3px solid var(--accent-navy); margin: 0.75rem 0 1.25rem;">
+          P_est (kW) = S_tr (kVA) × cos(φ) × LF_diversity
+        </div>
+        <p style="font-size: 0.85rem;">
+          Where \(S_{\text{tr}}\) is the dedicated transformer capacity (e.g. 1,600 kVA for Tech Tower, 2,000 kVA for Pearl Research Park), \(\cos(\phi) = 0.99\) (maintained via thyristor-switched APFC capacitor banks as per Green Audit p. 47), and \(LF_{\text{diversity}}\) is the measured diversity factor (0.50 to 0.65).
+        </p>
+
+        <h3>B. Carbon Dioxide Sequestration (Forest & Open Land)</h3>
+        <p>
+          Campus absorption figures follow empirical forestry formulas adopted in Environmental Audit 2024 (p. 20):
+        </p>
+        <ul style="padding-left: 1.25rem; line-height: 1.7; font-size: 0.85rem;">
+          <li><strong>Canopy Trees:</strong> 18.69 acres (75,649 m²) @ 100 t CO₂/acre/year = <strong>1,869.00 t/year</strong></li>
+          <li><strong>Open Porous Land:</strong> 6,31,928 m² @ 1.0 × 10⁻⁶ mol CO₂/(m²·s) = <strong>876.00 t/year</strong></li>
+          <li><strong>Lawns & Shrubs:</strong> 35.60 hectares @ 1.95 t CO₂/ha/year = <strong>69.44 t/year</strong></li>
+          <li><strong>Total Annual Natural Sequestration:</strong> <strong>2,814.44 t CO₂/year</strong></li>
+        </ul>
+
+        <h3>C. Scope 1 Combustion & Scope 2 Grid Emissions</h3>
+        <p style="font-size: 0.85rem;">
+          Calculated using standard IPCC emission factors applied by Eco Services India:
+        </p>
+        <div style="background: var(--bg-subtle); padding: 0.85rem 1.25rem; font-family: var(--font-mono); font-size: 0.85rem; border-left: 3px solid var(--accent-navy); margin: 0.75rem 0 1.25rem;">
+          E_gross = (kWh_grid × 0.813) + (L_diesel × 0.00333) + (L_petrol × 0.00166) + (L_LPG × 0.00152)<br>
+          E_net = E_gross − Absorption_campus
+        </div>
+
+        <h2>3. Sourced External Datasets (Open APIs)</h2>
+        <ul style="padding-left: 1.25rem; line-height: 1.7; font-size: 0.9rem;">
+          <li><strong>Open-Meteo Historical Climate API:</strong> Hourly and monthly ERA5-Land reanalysis dataset (no API key required) for coordinates 12.9692° N, 79.1559° E. Cached locally in <code>/data/vellore_climate_historical.json</code> to ensure full offline functionality.</li>
+          <li><strong>Open-Meteo Air Quality API:</strong> Ambient air pollution parameters (PM2.5, PM10, NO₂, SO₂, CO, AQI). Cached locally in <code>/data/vellore_air_quality_cache.json</code>.</li>
+          <li><strong>OpenStreetMap (Nominatim & Overpass):</strong> Campus geographical perimeter, building footprints, and Katpadi road network. Cached in <code>/data/campus_osm_boundary.json</code>.</li>
+        </ul>
+      </div>
+
+      <!-- Sidebar: Known Quirks & Discrepancies -->
+      <aside class="editorial-sidebar">
+        <h3>Known Data Quirks Handled</h3>
+        
+        <div class="editorial-note warning">
+          <div class="editorial-note-title">1. The 103.66% RES Anomaly in 2021</div>
+          The 2020 Energy Audit table (p. 6) lists a Renewable Energy Share of 103.659% for the year 2021. This occurred because the audit was compiled mid-year 2021 during COVID-19 remote instruction. The denominator only contained 6 months of restricted campus load (27.42 lakh units), while contracted wind wheeling credits (17.32 lakh units) and solar generation (11.10 lakh units) exceeded that partial total. In this dashboard, 2021 is clearly flagged as a part-year artifact.
+        </div>
+
+        <div class="editorial-note">
+          <div class="editorial-note-title">2. April 2019 Bill Discrepancy</div>
+          Energy Audit text (p. 4) casually writes <em>"40 Lakh units, the highest during 2019"</em>, whereas the official billing ledger table directly below it confirms <strong>46,88,760 HT units</strong> and ₹3,44,13,114. The official billing log is retained as the authoritative data source.
+        </div>
+
+        <div class="editorial-note">
+          <div class="editorial-note-title">3. Ambient CO₂ Telemetry</div>
+          Standard urban meteorological weather stations and open APIs report PM2.5, NO₂, SO₂, and CO, but do not operate ambient CO₂ ppm sensors. City-wide CO₂ concentration is documented as global background (~421 ppm), while campus emission hotspots are modelled from verified equipment and fuel ledgers.
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <div id="site-footer-container"></div>
+  <script src="js/nav.js"></script>
+</body>
+</html>

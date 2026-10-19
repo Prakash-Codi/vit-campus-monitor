@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CO2 Emissions & Decarbonisation | VIT Vellore</title>
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body data-page-id="nav-emissions">
+  <div id="site-header-container"></div>
+
+  <main class="main-wrapper">
+    <div class="section-label">Section 04 — Carbon Accounting & Abatement</div>
+    <h1>Campus Greenhouse Gas Footprint & Avoided Emissions</h1>
+
+    <div class="lead-paragraph">
+      "In 2024, VIT's gross greenhouse gas emissions totaled 30,757 tonnes CO₂e—with grid electricity comprising 77.9%. Campus vegetative sinks sequester 2,814 t CO₂/yr, yielding net emissions of 27,943 t CO₂e. Clean energy interventions currently avoid 14,500+ tonnes of additional emissions annually."
+    </div>
+
+    <!-- Metrics Row -->
+    <div class="metrics-row">
+      <div class="metric-card">
+        <div class="metric-num">30,757 <span style="font-size: 0.95rem;">t CO₂e</span></div>
+        <div class="metric-label">Gross Annual Greenhouse Footprint (Scope 1 + Scope 2)</div>
+        <div class="metric-source">Environmental Audit 2024, p. 21</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-num">2,814.4 <span style="font-size: 0.95rem;">t/yr</span></div>
+        <div class="metric-label">Sequestration by Campus Trees, Lawn & Open Soil</div>
+        <div class="metric-source">Green Audit 2023, p. 54</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-num">27,942.8 <span style="font-size: 0.95rem;">t/yr</span></div>
+        <div class="metric-label">Net Annual Campus Emissions (Gross Footprint − Natural Sinks)</div>
+        <div class="metric-source">Environmental Audit 2024, p. 21</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-num">13,103 <span style="font-size: 0.95rem;">t/yr</span></div>
+        <div class="metric-label">Emissions Avoided Annually via Offsite Wind & Solar Procurement</div>
+        <div class="metric-source">Calculated @ 0.813 kg/kWh</div>
+      </div>
+    </div>
+
+    <!-- Chart: Emissions Breakdown -->
+    <div class="editorial-grid">
+      <div class="editorial-main">
+        <h2>1. Gross Emissions Breakdown by Source (2024)</h2>
+        <p>
+          Grid-supplied electricity dominates the university's operational emissions footprint. While fuel combustion in 31 backup diesel generators (2,30,000 L/yr), student shuttles (2,83,057 L/yr), and kitchen LPG (16.61 lakh L/yr) contributes 4,246 tonnes CO₂e, purchased electricity represents 23,968 tonnes CO₂e.
+        </p>
+
+        <div style="background: var(--bg-surface); border: 1px solid var(--line-color); padding: 1.25rem; margin: 1.5rem 0;">
+          <div style="height: 340px;">
+            <canvas id="emissionsBreakdownChart"></canvas>
+          </div>
+        </div>
+        <div class="figure-caption">
+          <strong>Fig. 4.1</strong> — Source distribution of annual gross campus CO₂e emissions (30,757 tonnes total). Source: <em>Environmental Audit Report (2024)</em>, p. 21.
+        </div>
+
+        <h2>2. Avoided Emissions from Sustainable Infrastructure</h2>
+        <p>
+          VIT has invested in four major technical systems that actively displace thermal electricity and direct combustion:
+        </p>
+        
+        <div class="data-table-container">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Intervention</th>
+                <th>Technology Details</th>
+                <th class="num-cell">Energy Saved (Annual)</th>
+                <th class="num-cell">Avoided CO₂ (Annual)</th>
+                <th class="num-cell">Cost Saved (₹/yr)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Contracted Wind Wheeling</strong></td>
+                <td>1.22 Cr kWh purchased from Bharat Enterprises & BBK Shoes</td>
+                <td class="num-cell">1,22,00,000 kWh</td>
+                <td class="num-cell">9,918.6 t</td>
+                <td class="num-cell">₹3.63 Cr</td>
+              </tr>
+              <tr>
+                <td><strong>Rooftop Solar PV</strong></td>
+                <td>2.81 MWp rooftop panels producing 37.97 lakh units/yr</td>
+                <td class="num-cell">37,97,955 kWh</td>
+                <td class="num-cell">3,087.7 t</td>
+                <td class="num-cell">₹2.56 Cr</td>
+              </tr>
+              <tr>
+                <td><strong>District Cooling System</strong></td>
+                <td>5,500 TR central chiller plant vs decentralised split ACs</td>
+                <td class="num-cell">5,49,418 kWh</td>
+                <td class="num-cell">1,531.0 t</td>
+                <td class="num-cell">₹44.2 Lakh</td>
+              </tr>
+              <tr>
+                <td><strong>Heat Pump Hot Water</strong></td>
+                <td>SES 12T Heat Pumps (COP 4.0) vs electrical resistance</td>
+                <td class="num-cell">15,29,775 kWh</td>
+                <td class="num-cell">1,392.1 t</td>
+                <td class="num-cell">₹1.23 Cr</td>
+              </tr>
+              <tr>
+                <td><strong>Gandhi Block Cooling</strong></td>
+                <td>Radiant slab cooling + Indirect Evaporative Cooling (IEC)</td>
+                <td class="num-cell">3,14,160 kWh</td>
+                <td class="num-cell">12.6 t</td>
+                <td class="num-cell">₹21.9 Lakh</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="figure-caption">
+          <strong>Table 4.1</strong> — Clean technology displacement analysis. Calculated based on 2020 Energy Audit and 2024 Environmental Audit certified savings.
+        </div>
+
+        <h2>3. Point-Source Emitters & Laboratory Verification</h2>
+        <p>
+          Beyond utility electricity, specific engineering disciplines host localized emission sources identified during field audits:
+        </p>
+        <ul style="padding-left: 1.25rem; line-height: 1.7; font-size: 0.9rem;">
+          <li><strong>Automotive & IC Engine Labs (SMEC):</strong> Houses multi-cylinder test rigs and dynamometers burning diesel and petrol fuel blends for experimental combustion analysis. Exhaust is routed through dedicated scrubbers and elevated flues.</li>
+          <li><strong>Chemical & Process Engineering Labs (SCHEME / SMV):</strong> Operates batch reaction kettles, solvent recovery columns, and thermal units. Organic chemical wastes are safely sequestered in cement chambers and handed to TNPCB-authorized recyclers.</li>
+          <li><strong>Emergency DG Sets (31 units, 16.9 MVA):</strong> Diesel backup capacity operated during grid failures and monsoon emergencies. Fitted with acoustic enclosures and stack heights up to 24 meters in compliance with CPCB air pollution guidelines.</li>
+        </ul>
+      </div>
+
+      <!-- Sidebar: Carbon Sinks & Factor Comparison -->
+      <aside class="editorial-sidebar">
+        <h3>Campus Natural Carbon Sinks</h3>
+        <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 0.75rem;">
+          Annual biological carbon sequestration quantified by environmental auditors:
+        </p>
+        <div class="data-table-container">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Sink Category</th>
+                <th class="num-cell">Area</th>
+                <th class="num-cell">Absorption</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Forest Canopy / Trees</strong><br><span style="font-size: 0.72rem; color: #666;">(100 t/acre absorption)</span></td>
+                <td class="num-cell">18.69 acres<br>(75,649 m²)</td>
+                <td class="num-cell"><strong>1,869.0 t</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Open Permeable Soil</strong><br><span style="font-size: 0.72rem; color: #666;">(1.0 µmol/m²·s flux)</span></td>
+                <td class="num-cell">63.19 ha<br>(6,31,928 m²)</td>
+                <td class="num-cell"><strong>876.0 t</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Lawns, Shrubs & Hedges</strong><br><span style="font-size: 0.72rem; color: #666;">(1.95 t/ha/yr rate)</span></td>
+                <td class="num-cell">35.60 ha<br>(3,55,978 m²)</td>
+                <td class="num-cell"><strong>69.4 t</strong></td>
+              </tr>
+              <tr style="font-weight: 600; background: var(--bg-subtle);">
+                <td>Total Sequestration</td>
+                <td class="num-cell">117.48 ha</td>
+                <td class="num-cell"><strong>2,814.4 t/yr</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="figure-caption">
+          <strong>Table 4.2</strong> — Sequestration balances. Source: <em>Green Audit 2023</em>, p. 54.
+        </div>
+
+        <h3 style="margin-top: 2rem;">Emission Factor Sensitivity</h3>
+        <p style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.45;">
+          Grid greenhouse intensity factors vary depending on methodology:
+        </p>
+        <div class="data-table-container">
+          <table class="data-table">
+            <tbody>
+              <tr>
+                <td><strong>Audit 2020 Implied</strong></td>
+                <td class="num-cell">0.910 kg/kWh</td>
+              </tr>
+              <tr>
+                <td><strong>Env Audit 2024 Factor</strong></td>
+                <td class="num-cell">0.813 kg/kWh</td>
+              </tr>
+              <tr>
+                <td><strong>CEA Southern Grid (2023)</strong></td>
+                <td class="num-cell">0.716 kg/kWh</td>
+              </tr>
+              <tr>
+                <td><strong>CEA National Weighted</strong></td>
+                <td class="num-cell">0.727 kg/kWh</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="figure-caption">
+          Applying the official CEA Southern Grid factor reduces calculated 2024 grid electricity emissions from 23,968 t to 21,109 t CO₂e.
+        </div>
+      </aside>
+    </div>
+
+    <!-- Footnotes Section -->
+    <section class="footnotes-section">
+      <div class="section-label">Greenhouse Accounting Citations</div>
+      <ol>
+        <li id="fn1"><strong>Scope 1 Fuel Emissions:</strong> Diesel generators (2,30,000 L) and transport diesel (2,83,057 L) calculated at 0.00333 t CO₂/L. LPG (16,61,186 L) calculated at 0.00152 t CO₂/L. Environmental Audit Report 2024, p. 21.</li>
+        <li id="fn2"><strong>Scope 2 Grid Factor:</strong> The audit report applies a conservative 0.813 kg CO₂/kWh factor reflecting Tamil Nadu's legacy thermal fleet, whereas the CEA Version 19 CO₂ baseline for the integrated Southern regional grid documents 0.716 kg CO₂/kWh due to rising regional wind and solar penetration.</li>
+      </ol>
+    </section>
+  </main>
+
+  <div id="site-footer-container"></div>
+  <script src="js/nav.js"></script>
+  <script src="js/emissions.js"></script>
+</body>
+</html>

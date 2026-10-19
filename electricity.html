@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electricity Supply & Consumption | VIT Vellore</title>
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body data-page-id="nav-electricity">
+  <div id="site-header-container"></div>
+
+  <main class="main-wrapper">
+    <div class="section-label">Section 02 — Grid Inflow & Load Dynamics</div>
+    <h1>Electricity Supply, Demand Peaks & Renewables</h1>
+
+    <div class="lead-paragraph">
+      "Between 2014 and 2024, campus demand grew from 27.7M kWh to 45.6M kWh. Peak stress surfaced in April 2019 at 4.69M units (8,756 kVA demand), triggering rolling hostel load shedding and compelling a May–June summer vacation realignment."
+    </div>
+
+    <!-- Quick Stats -->
+    <div class="metrics-row">
+      <div class="metric-card">
+        <div class="metric-num">46,88,760 <span style="font-size: 0.95rem;">kWh</span></div>
+        <div class="metric-label">All-Time Peak Monthly HT Consumption (April 2019)</div>
+        <div class="metric-source">Energy Audit 2020, p. 4</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-num">8,756.4 <span style="font-size: 0.95rem;">kVA</span></div>
+        <div class="metric-label">Peak Maximum Demand Recorded (against 9,000 kW sanctioned)</div>
+        <div class="metric-source">Energy Audit 2020, p. 4</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-num">₹25.85 <span style="font-size: 0.95rem;">Cr</span></div>
+        <div class="metric-label">Total HT Electricity Bill in 2019 (avg ₹6.95 / unit)</div>
+        <div class="metric-source">Energy Audit 2020, p. 5</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-num">16.12 <span style="font-size: 0.95rem;">M kWh</span></div>
+        <div class="metric-label">Renewable Energy Used in 2024 (Solar + Wind + Biogas)</div>
+        <div class="metric-source">Env Audit 2024, p. 19</div>
+      </div>
+    </div>
+
+    <!-- Chart 1: Monthly HT Units & Demand (2019-2021) -->
+    <section class="figure-block">
+      <h2>1. Monthly HT Electricity Consumption & Peak Demand (Jan 2019 – Jun 2021)</h2>
+      <p>
+        The 30-month billing record captures the full operational lifecycle before, during, and in recovery from COVID-19 lockdowns. Key operational anomalies are directly annotated.
+      </p>
+      
+      <div style="background: var(--bg-surface); border: 1px solid var(--line-color); padding: 1.25rem; margin-top: 1rem;">
+        <div style="height: 380px;">
+          <canvas id="monthlyEnergyChart"></canvas>
+        </div>
+      </div>
+      <div class="figure-caption">
+        <strong>Fig. 2.1</strong> — Monthly High Tension (HT Tariff 1A) energy consumption (kWh, left axis) and instantaneous Maximum Demand (kVA, right axis). Source: <em>Energy Audit Report (2020)</em>, pp. 4–6.
+      </div>
+    </section>
+
+    <!-- Key Operational Events Narrative -->
+    <div class="editorial-grid">
+      <div class="editorial-main">
+        <h2>2. Anatomy of the 2018–2019 Peak Deficit & Interventions</h2>
+        <p>
+          Prior to 2018, VIT observed a summer vacation during December and June. However, energy audits demonstrated that December and January had the lowest baseline consumption (20–22 lakh units) due to mild winter weather and idle chillers. Conversely, April and May presented extreme cooling demand, pushing maximum demand to 8,756.4 kVA—dangerously close to the 9 MW sanctioned limit.
+        </p>
+
+        <h3>A. The 2018 Rolling Load Shedding Regime</h3>
+        <p>
+          During the severe summer grid deficit of 2018–2019, TANGEDCO imposed regional restrictions. VIT introduced a staggered 1-hour rolling load shedding rotation across Men's Hostels (A, B, D, E, F, G, H, J, K, L, M, N) from 09:00 to 22:00. Uninterrupted power for fans and essential lighting was sustained via 15 backup diesel generators (500 kVA each), burning thousands of litres of fuel.
+        </p>
+
+        <h3>B. Vacation Shift: The 20 Lakh Unit Saving</h3>
+        <p>
+          To permanently eliminate this vulnerability without compromising student comfort, the academic calendar was shifted in 2018. The summer vacation was permanently moved to May and June, with exams terminating around May 25. By closing hostel high-rises during peak heatwaves, May 2019 consumption fell to 17.6 lakh units and June to 14.8 lakh units, <strong>saving over 20 lakh units annually</strong> compared to pre-shift baselines.
+        </p>
+
+        <h3>C. COVID-19 Lockdown Shock (2020)</h3>
+        <p>
+          In late March 2020, nationwide lockdowns evacuated over 22,000 hostellers. In April 2020, campus consumption plummeted by 92% to 3,67,680 kWh, representing essential administrative baseload, server data centres, and water treatment operations.
+        </p>
+      </div>
+
+      <!-- Sidebar: Substation & Transformers -->
+      <aside class="editorial-sidebar">
+        <h3>Substation & Powerhouses</h3>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.75rem;">
+          Power enters the campus via a dedicated 33 kV incoming line stepped down to 11 kV across two 5 MVA transformers. Distribution is managed through 12 internal power houses.
+        </p>
+        <div class="data-table-container">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Power House</th>
+                <th class="num-cell">TR (kVA)</th>
+                <th class="num-cell">DG (kVA)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>University PH</td>
+                <td class="num-cell">3,000</td>
+                <td class="num-cell">2,310</td>
+              </tr>
+              <tr>
+                <td>Tech Tower PH</td>
+                <td class="num-cell">1,600</td>
+                <td class="num-cell">1,250</td>
+              </tr>
+              <tr>
+                <td>East Campus PH</td>
+                <td class="num-cell">3,000</td>
+                <td class="num-cell">1,500</td>
+              </tr>
+              <tr>
+                <td>PRP Block PH</td>
+                <td class="num-cell">2,000</td>
+                <td class="num-cell">810</td>
+              </tr>
+              <tr>
+                <td>Gandhi Block PH</td>
+                <td class="num-cell">950</td>
+                <td class="num-cell">500</td>
+              </tr>
+              <tr>
+                <td>Hostel PH-1</td>
+                <td class="num-cell">3,430</td>
+                <td class="num-cell">1,430</td>
+              </tr>
+              <tr>
+                <td>Hostel PH-2</td>
+                <td class="num-cell">2,000</td>
+                <td class="num-cell">1,500</td>
+              </tr>
+              <tr>
+                <td>Hostel PH-3</td>
+                <td class="num-cell">2,000</td>
+                <td class="num-cell">1,960</td>
+              </tr>
+              <tr>
+                <td>MH Chiller Plant</td>
+                <td class="num-cell">4,000</td>
+                <td class="num-cell">—</td>
+              </tr>
+              <tr>
+                <td>LH Chiller Plant</td>
+                <td class="num-cell">4,000</td>
+                <td class="num-cell">650</td>
+              </tr>
+              <tr style="font-weight: 600; background: var(--bg-subtle);">
+                <td>Total (12 Power Houses)</td>
+                <td class="num-cell">25,980</td>
+                <td class="num-cell">12,243</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="figure-caption">
+          <strong>Table 2.1</strong> — Substation transformer & generator allocations. Source: <em>Green Audit 2023</em>, p. 46.
+        </div>
+      </aside>
+    </div>
+
+    <!-- Chart 2: 10-Year Renewable Trend (2014-2024) -->
+    <section class="figure-block" style="margin-top: 3rem;">
+      <h2>3. Decarbonisation Trajectory: Grid vs Solar vs Wind (2014–2024)</h2>
+      <p>
+        From 2014 to 2018, VIT drew almost 100% of its electricity from the coal-heavy Southern regional grid. Commencing in 2018 with offsite wind wheeling and 2.113 MWp of rooftop solar PV, renewable procurement expanded to 16.12 million units by 2024.
+      </p>
+
+      <div style="background: var(--bg-surface); border: 1px solid var(--line-color); padding: 1.25rem; margin-top: 1rem;">
+        <div style="height: 380px;">
+          <canvas id="yearlyEnergyChart"></canvas>
+        </div>
+      </div>
+      <div class="figure-caption">
+        <strong>Fig. 2.2</strong> — Annual energy mix (kWh) from 2014 to 2024 showing net grid reliance, in-house rooftop solar generation, and wheeling wind procurement. Sources: <em>Energy Audit 2020</em>, p. 6; <em>Green Audit 2023</em>, p. 50; <em>Environmental Audit 2024</em>, p. 19.
+      </div>
+    </section>
+
+    <!-- Data Table: 10-Year History -->
+    <section style="margin-top: 2rem;">
+      <h3>Historical Consumption & Renewable Generation Ledger</h3>
+      <div class="data-table-container">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Year</th>
+              <th class="num-cell">Sanctioned (kW)</th>
+              <th class="num-cell">Total Consumed (kWh)</th>
+              <th class="num-cell">Rooftop Solar (kWh)</th>
+              <th class="num-cell">Solar Cap. (kWp)</th>
+              <th class="num-cell">Wind Power (kWh)</th>
+              <th class="num-cell">RES Share (%)</th>
+              <th>Operational Context</th>
+            </tr>
+          </thead>
+          <tbody id="yearlyTableBody">
+            <!-- Populated via charts.js -->
+          </tbody>
+        </table>
+      </div>
+      <div class="figure-caption">
+        <strong>Table 2.2</strong> — Historical energy ledgers. *Note on 2021: 103.66% is a part-year artifact (see footnote 2).
+      </div>
+    </section>
+
+    <!-- Footnotes Section -->
+    <section class="footnotes-section">
+      <div class="section-label">Technical Notes & Footnotes</div>
+      <ol>
+        <li id="fn1"><strong>April 2019 Bill Discrepancy:</strong> The Energy Audit discussion mentions 40 lakh units as peak consumption, but Table 'EB Bill Analysis' records 46,88,760 kWh and ₹3,44,13,114. We preserve the verified meter ledger value of 4.69M units.</li>
+        <li id="fn2"><strong>2021 Renewable Percentage (103.66%):</strong> The 2020 Energy Audit records RES % = 103.659% for 2021. This reflects only 6 months of COVID-restricted campus consumption (27,42,960 kWh) against full wheeling credits (17,32,792 kWh wind + 11,10,534 kWh solar). This mathematical anomaly is documented here and excluded from annualised performance metrics.</li>
+        <li id="fn3"><strong>Tariff Structure:</strong> Electricity is billed under TNPDCL HT Tariff 1A (Educational Institutions) with demand charges at ₹562/kVA/month, energy charges at ₹6.75/kWh, and 20% Time-of-Day peak surcharge between 06:00–09:00 and 18:00–21:00.</li>
+      </ol>
+    </section>
+  </main>
+
+  <div id="site-footer-container"></div>
+  <script src="js/nav.js"></script>
+  <script src="js/charts.js"></script>
+</body>
+</html>

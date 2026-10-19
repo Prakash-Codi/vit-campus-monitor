@@ -1,0 +1,129 @@
+{
+  "source": "Energy Audit Report (2020), p. 6; Green Audit Report (2023), p. 46, 50, 54; Environmental Audit Report (2024), p. 19",
+  "records": [
+    {
+      "year": 2014,
+      "sanctioned_demand_kw": 7000,
+      "energy_consumed_kwh": 27729159,
+      "solar_generation_kwh": 0,
+      "solar_pv_capacity_kwp": 0,
+      "wind_power_purchased_kwh": 0,
+      "total_renewable_kwh": 0,
+      "res_percentage": 0.0,
+      "notes": "Baseline grid reliance"
+    },
+    {
+      "year": 2015,
+      "sanctioned_demand_kw": 7500,
+      "energy_consumed_kwh": 31075507,
+      "solar_generation_kwh": 186725,
+      "solar_pv_capacity_kwp": 500,
+      "wind_power_purchased_kwh": 0,
+      "total_renewable_kwh": 186725,
+      "res_percentage": 0.6009,
+      "notes": "First 500 kWp rooftop solar commissioned"
+    },
+    {
+      "year": 2016,
+      "sanctioned_demand_kw": 8000,
+      "energy_consumed_kwh": 32633454,
+      "solar_generation_kwh": 748983,
+      "solar_pv_capacity_kwp": 500,
+      "wind_power_purchased_kwh": 0,
+      "total_renewable_kwh": 748983,
+      "res_percentage": 2.2951,
+      "notes": "Full-year 500 kWp solar operation"
+    },
+    {
+      "year": 2017,
+      "sanctioned_demand_kw": 8000,
+      "energy_consumed_kwh": 35006610,
+      "solar_generation_kwh": 682272,
+      "solar_pv_capacity_kwp": 500,
+      "wind_power_purchased_kwh": 0,
+      "total_renewable_kwh": 682272,
+      "res_percentage": 1.949,
+      "notes": "Pre-vacation shift peak load"
+    },
+    {
+      "year": 2018,
+      "sanctioned_demand_kw": 9000,
+      "energy_consumed_kwh": 34166270,
+      "solar_generation_kwh": 816194,
+      "solar_pv_capacity_kwp": 1113,
+      "wind_power_purchased_kwh": 97039,
+      "total_renewable_kwh": 913233,
+      "res_percentage": 2.6729,
+      "notes": "Solar expansion to 1,113 kWp; Bharat Enterprises wind PPA signed Nov 2018"
+    },
+    {
+      "year": 2019,
+      "sanctioned_demand_kw": 9000,
+      "energy_consumed_kwh": 37162080,
+      "solar_generation_kwh": 1297346,
+      "solar_pv_capacity_kwp": 1113,
+      "wind_power_purchased_kwh": 5431477,
+      "total_renewable_kwh": 6728823,
+      "res_percentage": 18.1067,
+      "notes": "Major wind power procurement begins (18.1% RES)"
+    },
+    {
+      "year": 2020,
+      "sanctioned_demand_kw": 9000,
+      "energy_consumed_kwh": 12074400,
+      "solar_generation_kwh": 1398979,
+      "solar_pv_capacity_kwp": 2113,
+      "wind_power_purchased_kwh": 3749393,
+      "total_renewable_kwh": 5148372,
+      "res_percentage": 42.6387,
+      "notes": "COVID lockdown drop in grid consumption; RES % rose artificially to 42.6%"
+    },
+    {
+      "year": 2021,
+      "sanctioned_demand_kw": 9000,
+      "energy_consumed_kwh": 2742960,
+      "solar_generation_kwh": 1110534,
+      "solar_pv_capacity_kwp": 2113,
+      "wind_power_purchased_kwh": 1732792,
+      "total_renewable_kwh": 2843326,
+      "res_percentage": 103.659,
+      "is_part_year": true,
+      "anomaly_warning": "DATA QUIRK: The audit lists RES % = 103.659% because energy consumed represents only 6 months of restricted COVID campus load (2.74M kWh) while solar and contracted wind wheeling were credited against this low denominator. Must never be shown as full-year reality."
+    },
+    {
+      "year": 2022,
+      "sanctioned_demand_kw": 10500,
+      "energy_consumed_kwh": 42060000,
+      "solar_generation_kwh": 1770000,
+      "solar_pv_capacity_kwp": 2113,
+      "wind_power_purchased_kwh": 7929515,
+      "total_renewable_kwh": 9699515,
+      "res_percentage": 23.06,
+      "notes": "Post-COVID recovery, full student return"
+    },
+    {
+      "year": 2023,
+      "sanctioned_demand_kw": 10500,
+      "energy_consumed_kwh": 44400000,
+      "solar_generation_kwh": 1998979,
+      "solar_pv_capacity_kwp": 2113,
+      "wind_power_purchased_kwh": 7101626,
+      "total_renewable_kwh": 9100605,
+      "res_percentage": 20.5,
+      "notes": "Rooftop solar (6,813 panels, 2.113 MWp) generates ~2M kWh/yr"
+    },
+    {
+      "year": 2024,
+      "sanctioned_demand_kw": 10500,
+      "energy_consumed_kwh": 45600000,
+      "solar_generation_kwh": 3797955,
+      "solar_pv_capacity_kwp": 2813.3,
+      "wind_power_purchased_kwh": 12200000,
+      "biomass_generation_kwh": 120000,
+      "total_renewable_kwh": 16117955,
+      "net_grid_consumption_kwh": 29482045,
+      "res_percentage": 35.35,
+      "notes": "Env Audit 2024 certified footprint"
+    }
+  ]
+}

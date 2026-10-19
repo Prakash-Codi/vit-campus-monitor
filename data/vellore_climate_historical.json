@@ -1,0 +1,493 @@
+{
+  "source": "Open-Meteo Historical Weather API (ERA5-Land reanalysis for 12.9692\u00b0N, 79.1559\u00b0E)",
+  "retrieved_at": "2026-10-19T11:43:58Z",
+  "monthly": [
+    {
+      "month": "2019-01",
+      "temp_max_avg": 29.9,
+      "temp_min_avg": 17.5,
+      "temp_mean_avg": 23.2,
+      "relative_humidity_avg": 67.6,
+      "precipitation_total_mm": 7.8
+    },
+    {
+      "month": "2019-02",
+      "temp_max_avg": 33.7,
+      "temp_min_avg": 20.7,
+      "temp_mean_avg": 26.7,
+      "relative_humidity_avg": 62.9,
+      "precipitation_total_mm": 1.9
+    },
+    {
+      "month": "2019-03",
+      "temp_max_avg": 37.0,
+      "temp_min_avg": 22.7,
+      "temp_mean_avg": 29.4,
+      "relative_humidity_avg": 55.0,
+      "precipitation_total_mm": 1.4
+    },
+    {
+      "month": "2019-04",
+      "temp_max_avg": 38.9,
+      "temp_min_avg": 24.3,
+      "temp_mean_avg": 31.1,
+      "relative_humidity_avg": 55.3,
+      "precipitation_total_mm": 17.1
+    },
+    {
+      "month": "2019-05",
+      "temp_max_avg": 40.0,
+      "temp_min_avg": 27.9,
+      "temp_mean_avg": 33.4,
+      "relative_humidity_avg": 49.0,
+      "precipitation_total_mm": 10.6
+    },
+    {
+      "month": "2019-06",
+      "temp_max_avg": 38.5,
+      "temp_min_avg": 27.4,
+      "temp_mean_avg": 32.2,
+      "relative_humidity_avg": 51.7,
+      "precipitation_total_mm": 26.4
+    },
+    {
+      "month": "2019-07",
+      "temp_max_avg": 36.2,
+      "temp_min_avg": 26.0,
+      "temp_mean_avg": 30.5,
+      "relative_humidity_avg": 56.0,
+      "precipitation_total_mm": 92.8
+    },
+    {
+      "month": "2019-08",
+      "temp_max_avg": 34.7,
+      "temp_min_avg": 25.6,
+      "temp_mean_avg": 29.2,
+      "relative_humidity_avg": 62.8,
+      "precipitation_total_mm": 116.7
+    },
+    {
+      "month": "2019-09",
+      "temp_max_avg": 32.9,
+      "temp_min_avg": 24.4,
+      "temp_mean_avg": 27.8,
+      "relative_humidity_avg": 72.9,
+      "precipitation_total_mm": 188.0
+    },
+    {
+      "month": "2019-10",
+      "temp_max_avg": 29.7,
+      "temp_min_avg": 23.0,
+      "temp_mean_avg": 25.9,
+      "relative_humidity_avg": 84.5,
+      "precipitation_total_mm": 297.5
+    },
+    {
+      "month": "2019-11",
+      "temp_max_avg": 29.4,
+      "temp_min_avg": 22.1,
+      "temp_mean_avg": 25.3,
+      "relative_humidity_avg": 81.6,
+      "precipitation_total_mm": 84.7
+    },
+    {
+      "month": "2019-12",
+      "temp_max_avg": 27.3,
+      "temp_min_avg": 20.2,
+      "temp_mean_avg": 23.5,
+      "relative_humidity_avg": 81.7,
+      "precipitation_total_mm": 106.6
+    },
+    {
+      "month": "2020-01",
+      "temp_max_avg": 29.5,
+      "temp_min_avg": 19.5,
+      "temp_mean_avg": 24.0,
+      "relative_humidity_avg": 76.2,
+      "precipitation_total_mm": 20.8
+    },
+    {
+      "month": "2020-02",
+      "temp_max_avg": 31.1,
+      "temp_min_avg": 19.9,
+      "temp_mean_avg": 25.1,
+      "relative_humidity_avg": 68.3,
+      "precipitation_total_mm": 2.7
+    },
+    {
+      "month": "2020-03",
+      "temp_max_avg": 34.7,
+      "temp_min_avg": 22.2,
+      "temp_mean_avg": 27.9,
+      "relative_humidity_avg": 62.4,
+      "precipitation_total_mm": 4.5
+    },
+    {
+      "month": "2020-04",
+      "temp_max_avg": 37.0,
+      "temp_min_avg": 24.3,
+      "temp_mean_avg": 30.0,
+      "relative_humidity_avg": 61.0,
+      "precipitation_total_mm": 13.0
+    },
+    {
+      "month": "2020-05",
+      "temp_max_avg": 38.0,
+      "temp_min_avg": 26.2,
+      "temp_mean_avg": 31.7,
+      "relative_humidity_avg": 57.6,
+      "precipitation_total_mm": 7.3
+    },
+    {
+      "month": "2020-06",
+      "temp_max_avg": 36.2,
+      "temp_min_avg": 26.3,
+      "temp_mean_avg": 30.6,
+      "relative_humidity_avg": 58.7,
+      "precipitation_total_mm": 128.6
+    },
+    {
+      "month": "2020-07",
+      "temp_max_avg": 32.6,
+      "temp_min_avg": 24.3,
+      "temp_mean_avg": 27.8,
+      "relative_humidity_avg": 74.8,
+      "precipitation_total_mm": 208.5
+    },
+    {
+      "month": "2020-08",
+      "temp_max_avg": 33.4,
+      "temp_min_avg": 25.0,
+      "temp_mean_avg": 28.6,
+      "relative_humidity_avg": 65.9,
+      "precipitation_total_mm": 72.0
+    },
+    {
+      "month": "2020-09",
+      "temp_max_avg": 31.6,
+      "temp_min_avg": 24.0,
+      "temp_mean_avg": 27.0,
+      "relative_humidity_avg": 76.5,
+      "precipitation_total_mm": 210.9
+    },
+    {
+      "month": "2020-10",
+      "temp_max_avg": 32.1,
+      "temp_min_avg": 23.6,
+      "temp_mean_avg": 27.2,
+      "relative_humidity_avg": 71.6,
+      "precipitation_total_mm": 99.8
+    },
+    {
+      "month": "2020-11",
+      "temp_max_avg": 29.0,
+      "temp_min_avg": 21.6,
+      "temp_mean_avg": 24.8,
+      "relative_humidity_avg": 81.1,
+      "precipitation_total_mm": 302.4
+    },
+    {
+      "month": "2020-12",
+      "temp_max_avg": 27.0,
+      "temp_min_avg": 19.4,
+      "temp_mean_avg": 22.9,
+      "relative_humidity_avg": 81.8,
+      "precipitation_total_mm": 129.6
+    },
+    {
+      "month": "2021-01",
+      "temp_max_avg": 28.1,
+      "temp_min_avg": 19.6,
+      "temp_mean_avg": 23.5,
+      "relative_humidity_avg": 80.1,
+      "precipitation_total_mm": 56.8
+    },
+    {
+      "month": "2021-02",
+      "temp_max_avg": 30.6,
+      "temp_min_avg": 18.4,
+      "temp_mean_avg": 24.0,
+      "relative_humidity_avg": 68.1,
+      "precipitation_total_mm": 19.0
+    },
+    {
+      "month": "2021-03",
+      "temp_max_avg": 35.2,
+      "temp_min_avg": 20.2,
+      "temp_mean_avg": 27.3,
+      "relative_humidity_avg": 58.7,
+      "precipitation_total_mm": 0.0
+    },
+    {
+      "month": "2021-04",
+      "temp_max_avg": 37.5,
+      "temp_min_avg": 24.6,
+      "temp_mean_avg": 30.5,
+      "relative_humidity_avg": 58.2,
+      "precipitation_total_mm": 11.3
+    },
+    {
+      "month": "2021-05",
+      "temp_max_avg": 37.4,
+      "temp_min_avg": 26.0,
+      "temp_mean_avg": 31.0,
+      "relative_humidity_avg": 58.3,
+      "precipitation_total_mm": 112.9
+    },
+    {
+      "month": "2021-06",
+      "temp_max_avg": 35.9,
+      "temp_min_avg": 26.0,
+      "temp_mean_avg": 30.5,
+      "relative_humidity_avg": 55.3,
+      "precipitation_total_mm": 35.8
+    },
+    {
+      "month": "2021-07",
+      "temp_max_avg": 33.4,
+      "temp_min_avg": 24.9,
+      "temp_mean_avg": 28.5,
+      "relative_humidity_avg": 66.7,
+      "precipitation_total_mm": 139.9
+    },
+    {
+      "month": "2021-08",
+      "temp_max_avg": 34.2,
+      "temp_min_avg": 24.9,
+      "temp_mean_avg": 28.8,
+      "relative_humidity_avg": 65.8,
+      "precipitation_total_mm": 126.5
+    },
+    {
+      "month": "2021-09",
+      "temp_max_avg": 33.4,
+      "temp_min_avg": 24.7,
+      "temp_mean_avg": 28.4,
+      "relative_humidity_avg": 67.4,
+      "precipitation_total_mm": 101.4
+    },
+    {
+      "month": "2021-10",
+      "temp_max_avg": 30.9,
+      "temp_min_avg": 23.1,
+      "temp_mean_avg": 26.2,
+      "relative_humidity_avg": 83.2,
+      "precipitation_total_mm": 315.4
+    },
+    {
+      "month": "2021-11",
+      "temp_max_avg": 27.0,
+      "temp_min_avg": 22.0,
+      "temp_mean_avg": 23.9,
+      "relative_humidity_avg": 89.4,
+      "precipitation_total_mm": 558.1
+    },
+    {
+      "month": "2021-12",
+      "temp_max_avg": 28.2,
+      "temp_min_avg": 19.4,
+      "temp_mean_avg": 23.4,
+      "relative_humidity_avg": 79.9,
+      "precipitation_total_mm": 49.5
+    },
+    {
+      "month": "2022-01",
+      "temp_max_avg": 29.7,
+      "temp_min_avg": 19.7,
+      "temp_mean_avg": 24.1,
+      "relative_humidity_avg": 75.3,
+      "precipitation_total_mm": 18.0
+    },
+    {
+      "month": "2022-02",
+      "temp_max_avg": 31.9,
+      "temp_min_avg": 19.2,
+      "temp_mean_avg": 25.2,
+      "relative_humidity_avg": 66.7,
+      "precipitation_total_mm": 2.1
+    },
+    {
+      "month": "2022-03",
+      "temp_max_avg": 35.8,
+      "temp_min_avg": 21.7,
+      "temp_mean_avg": 28.4,
+      "relative_humidity_avg": 55.0,
+      "precipitation_total_mm": 8.4
+    },
+    {
+      "month": "2022-04",
+      "temp_max_avg": 37.1,
+      "temp_min_avg": 24.6,
+      "temp_mean_avg": 30.4,
+      "relative_humidity_avg": 59.8,
+      "precipitation_total_mm": 6.0
+    },
+    {
+      "month": "2022-05",
+      "temp_max_avg": 35.8,
+      "temp_min_avg": 25.4,
+      "temp_mean_avg": 29.8,
+      "relative_humidity_avg": 62.2,
+      "precipitation_total_mm": 118.5
+    },
+    {
+      "month": "2022-06",
+      "temp_max_avg": 35.2,
+      "temp_min_avg": 25.3,
+      "temp_mean_avg": 29.3,
+      "relative_humidity_avg": 63.6,
+      "precipitation_total_mm": 82.5
+    },
+    {
+      "month": "2022-07",
+      "temp_max_avg": 33.4,
+      "temp_min_avg": 24.6,
+      "temp_mean_avg": 28.0,
+      "relative_humidity_avg": 68.8,
+      "precipitation_total_mm": 178.4
+    },
+    {
+      "month": "2022-08",
+      "temp_max_avg": 33.0,
+      "temp_min_avg": 24.3,
+      "temp_mean_avg": 27.8,
+      "relative_humidity_avg": 69.6,
+      "precipitation_total_mm": 179.9
+    },
+    {
+      "month": "2022-09",
+      "temp_max_avg": 32.5,
+      "temp_min_avg": 23.9,
+      "temp_mean_avg": 27.5,
+      "relative_humidity_avg": 70.6,
+      "precipitation_total_mm": 119.8
+    },
+    {
+      "month": "2022-10",
+      "temp_max_avg": 30.4,
+      "temp_min_avg": 21.9,
+      "temp_mean_avg": 25.5,
+      "relative_humidity_avg": 78.1,
+      "precipitation_total_mm": 189.9
+    },
+    {
+      "month": "2022-11",
+      "temp_max_avg": 27.7,
+      "temp_min_avg": 20.3,
+      "temp_mean_avg": 23.5,
+      "relative_humidity_avg": 83.0,
+      "precipitation_total_mm": 286.4
+    },
+    {
+      "month": "2022-12",
+      "temp_max_avg": 27.6,
+      "temp_min_avg": 19.6,
+      "temp_mean_avg": 23.1,
+      "relative_humidity_avg": 82.1,
+      "precipitation_total_mm": 182.6
+    },
+    {
+      "month": "2023-01",
+      "temp_max_avg": 28.5,
+      "temp_min_avg": 17.3,
+      "temp_mean_avg": 22.5,
+      "relative_humidity_avg": 74.8,
+      "precipitation_total_mm": 9.8
+    },
+    {
+      "month": "2023-02",
+      "temp_max_avg": 32.4,
+      "temp_min_avg": 18.3,
+      "temp_mean_avg": 25.0,
+      "relative_humidity_avg": 58.4,
+      "precipitation_total_mm": 0.3
+    },
+    {
+      "month": "2023-03",
+      "temp_max_avg": 34.3,
+      "temp_min_avg": 21.3,
+      "temp_mean_avg": 27.2,
+      "relative_humidity_avg": 62.2,
+      "precipitation_total_mm": 58.4
+    },
+    {
+      "month": "2023-04",
+      "temp_max_avg": 36.9,
+      "temp_min_avg": 23.6,
+      "temp_mean_avg": 29.9,
+      "relative_humidity_avg": 56.3,
+      "precipitation_total_mm": 25.1
+    },
+    {
+      "month": "2023-05",
+      "temp_max_avg": 37.5,
+      "temp_min_avg": 25.6,
+      "temp_mean_avg": 30.7,
+      "relative_humidity_avg": 59.4,
+      "precipitation_total_mm": 125.1
+    },
+    {
+      "month": "2023-06",
+      "temp_max_avg": 36.9,
+      "temp_min_avg": 26.6,
+      "temp_mean_avg": 30.8,
+      "relative_humidity_avg": 57.2,
+      "precipitation_total_mm": 104.6
+    },
+    {
+      "month": "2023-07",
+      "temp_max_avg": 34.1,
+      "temp_min_avg": 25.6,
+      "temp_mean_avg": 29.2,
+      "relative_humidity_avg": 62.2,
+      "precipitation_total_mm": 96.0
+    },
+    {
+      "month": "2023-08",
+      "temp_max_avg": 36.4,
+      "temp_min_avg": 25.3,
+      "temp_mean_avg": 30.3,
+      "relative_humidity_avg": 57.5,
+      "precipitation_total_mm": 93.2
+    },
+    {
+      "month": "2023-09",
+      "temp_max_avg": 33.7,
+      "temp_min_avg": 24.7,
+      "temp_mean_avg": 28.3,
+      "relative_humidity_avg": 70.2,
+      "precipitation_total_mm": 204.9
+    },
+    {
+      "month": "2023-10",
+      "temp_max_avg": 32.9,
+      "temp_min_avg": 23.1,
+      "temp_mean_avg": 27.5,
+      "relative_humidity_avg": 70.8,
+      "precipitation_total_mm": 91.8
+    },
+    {
+      "month": "2023-11",
+      "temp_max_avg": 29.4,
+      "temp_min_avg": 21.9,
+      "temp_mean_avg": 24.9,
+      "relative_humidity_avg": 84.5,
+      "precipitation_total_mm": 249.3
+    },
+    {
+      "month": "2023-12",
+      "temp_max_avg": 28.5,
+      "temp_min_avg": 20.3,
+      "temp_mean_avg": 24.0,
+      "relative_humidity_avg": 80.5,
+      "precipitation_total_mm": 81.8
+    }
+  ],
+  "annual_normals": {
+    "peak_summer_month": "May",
+    "hottest_mean_max_c": 39.4,
+    "peak_humidity_months": "October - November (North-East Monsoon)",
+    "lowest_temp_month": "January (19-21\u00b0C)",
+    "annual_rainfall_mm": 880.5
+  }
+}

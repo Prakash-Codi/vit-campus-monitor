@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buildings & Facilities | VIT Vellore</title>
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      background: var(--bg-surface);
+      border: 1px solid var(--line-color);
+      padding: 0.85rem 1rem;
+      margin: 1.5rem 0 1rem;
+    }
+    .filter-input {
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      padding: 0.4rem 0.65rem;
+      border: 1px solid var(--line-dark);
+      border-radius: 2px;
+      min-width: 220px;
+    }
+    .filter-select {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      padding: 0.4rem 0.65rem;
+      border: 1px solid var(--line-dark);
+      border-radius: 2px;
+      background: var(--bg-surface);
+    }
+    .badge-category {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      padding: 0.15rem 0.4rem;
+      border-radius: 2px;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+    .badge-category.Academic { background: #e0e7ff; color: #1e1b4b; }
+    .badge-category.Hostel { background: #dbeafe; color: #1e3a8a; }
+    .badge-category.Auditorium { background: #fef3c7; color: #78350f; }
+    .badge-category.Sports { background: #dcfce7; color: #14532d; }
+    .badge-category.Facility { background: #f1f5f9; color: #334155; }
+  </style>
+</head>
+<body data-page-id="nav-buildings">
+  <div id="site-header-container"></div>
+
+  <main class="main-wrapper">
+    <div class="section-label">Section 06 — Built Infrastructure Directory</div>
+    <h1>Buildings, Facilities & Residential Infrastructure</h1>
+
+    <div class="lead-paragraph">
+      "VIT Vellore's 6,49,393 m² built envelope comprises 32 hostel blocks, 7 flagship academic blocks, 5 major auditoriums, and specialized sporting arenas. Use the interactive controls below to filter by category or search by keyword."
+    </div>
+
+    <!-- Filter & Search Toolbar -->
+    <div class="filter-bar">
+      <div>
+        <label for="searchInput" style="font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase; margin-right: 0.5rem;">Search:</label>
+        <input type="text" id="searchInput" class="filter-input" placeholder="Search by name, block, or lab...">
+      </div>
+      <div>
+        <label for="categoryFilter" style="font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase; margin-right: 0.5rem;">Category:</label>
+        <select id="categoryFilter" class="filter-select">
+          <option value="ALL">All Categories</option>
+          <option value="Academic">Academic Blocks & Labs</option>
+          <option value="Hostel">Hostel Clusters</option>
+          <option value="Auditorium">Auditoriums & Halls</option>
+          <option value="Sports">Sports Facilities</option>
+          <option value="Facility">Campus Amenities & Dining</option>
+        </select>
+      </div>
+      <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); margin-left: auto;">
+        Showing <span id="recordCount" style="font-weight: 600; color: var(--text-main);">—</span> entries
+      </div>
+    </div>
+
+    <!-- Interactive Sortable Buildings Table -->
+    <div class="data-table-container">
+      <table class="data-table" id="buildingsTable">
+        <thead>
+          <tr>
+            <th onclick="sortTable(0)" style="cursor: pointer;">Building / Facility Name ↕</th>
+            <th onclick="sortTable(1)" style="cursor: pointer;">Category ↕</th>
+            <th>Type & Infrastructure</th>
+            <th class="num-cell" onclick="sortTable(3)" style="cursor: pointer;">Floors ↕</th>
+            <th class="num-cell" onclick="sortTable(4)" style="cursor: pointer;">Capacity ↕</th>
+            <th class="num-cell" onclick="sortTable(5)" style="cursor: pointer;">Area (m²) ↕</th>
+            <th>Environmental & Energy Features</th>
+            <th>Location</th>
+          </tr>
+        </thead>
+        <tbody id="buildingsTableBody">
+          <!-- Populated by buildings.js -->
+        </tbody>
+      </table>
+    </div>
+    <div class="figure-caption">
+      <strong>Table 5.1</strong> — Complete campus building database. Sources: Field Notes, Green Audit Report 2023, and Environmental Audit Report 2024.
+    </div>
+
+    <!-- Residential Hostels Analytical Summary -->
+    <div class="editorial-grid" style="margin-top: 3rem;">
+      <div class="editorial-main">
+        <h2>Hostel Accommodation Architecture</h2>
+        <p>
+          The residential infrastructure houses 21,936 students across 32 individual blocks (21 for male students, 11 for female students), with an average occupancy of ~686 students per block. Older low-rise blocks (A through F) are characterized by open internal courtyards and natural ventilation. Later phases (L, M, N, P, Q, R, and S) represent high-rise towers up to 16 storeys equipped with variable-frequency ACVVF elevators and central district cooling connections.
+        </p>
+        <p>
+          Domestic hot water demand in hostels has been systematically decoupled from electrical resistance heating. A total of 47,000 Litres Per Day (LPD) of rooftop solar flat-plate collectors work in tandem with 16,800 Litres Per Hour of centralized heat pump water heaters (COP 4.0), delivering 55°C water while consuming only 25% of the electricity required by immersion boilers.
+        </p>
+      </div>
+
+      <aside class="editorial-sidebar">
+        <h3>Hostel Metrics at a Glance</h3>
+        <div class="data-table-container">
+          <table class="data-table">
+            <tbody>
+              <tr><td>Total Hostel Blocks</td><td class="num-cell">32 blocks</td></tr>
+              <tr><td>Boys' Hostels</td><td class="num-cell">21 blocks</td></tr>
+              <tr><td>Girls' Hostels</td><td class="num-cell">11 blocks</td></tr>
+              <tr><td>Total Residents</td><td class="num-cell">21,936 students</td></tr>
+              <tr><td>Total Hostel Toilets</td><td class="num-cell">3,372 units</td></tr>
+              <tr><td>Hot Water Solar Arrays</td><td class="num-cell">47,000 LPD</td></tr>
+              <tr><td>Heat Pump Capacity</td><td class="num-cell">16,800 LPH</td></tr>
+              <tr><td>Recycled Flushing Water</td><td class="num-cell">2,118 KLD</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <div id="site-footer-container"></div>
+  <script src="js/nav.js"></script>
+  <script src="js/buildings.js"></script>
+</body>
+</html>

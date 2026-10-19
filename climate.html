@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Climate & Microclimate | VIT Vellore</title>
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body data-page-id="nav-climate">
+  <div id="site-header-container"></div>
+
+  <main class="main-wrapper">
+    <div class="section-label">Section 03 — Environmental Forcing & Thermal Comfort</div>
+    <h1>Vellore Climate Profile & Seasonal Cooling Load Coupling</h1>
+
+    <div class="lead-paragraph">
+      "Vellore's inland plateau geography subjects the campus to severe April–May dry heat (averaging 38.5°C to 41.2°C daytime peaks) followed by high post-monsoon relative humidity (78% in Nov). Electricity demand exhibits an immediate 0.88 correlation with mean monthly temperature."
+    </div>
+
+    <!-- Metrics Row -->
+    <div class="metrics-row">
+      <div class="metric-card">
+        <div class="metric-num">39.4°C</div>
+        <div class="metric-label">Mean Maximum Temperature in May (Vellore Climate Normals)</div>
+        <div class="metric-source">Open-Meteo ERA5-Land Reanalysis</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-num">−3.0°C</div>
+        <div class="metric-label">Campus Shade Microclimate Buffer beneath Mature Tree Canopy</div>
+        <div class="metric-source">Green Audit 2023, p. 73</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-num">78.2%</div>
+        <div class="metric-label">Peak Relative Humidity in November (NE Monsoon Season)</div>
+        <div class="metric-source">Open-Meteo Vellore Weather Station</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-num">50%</div>
+        <div class="metric-label">HVAC Energy Reduction achieved by Gandhi Block Radiant Cooling</div>
+        <div class="metric-source">Energy Audit 2020, p. 12</div>
+      </div>
+    </div>
+
+    <!-- Chart: Temperature vs Electricity Demand -->
+    <section class="figure-block">
+      <h2>1. The Summer AC Spike: Temperature vs HT Electricity Demand (2019)</h2>
+      <p>
+        Under normal academic operations (pre-COVID 2019), campus electricity consumption tracked monthly temperatures in lockstep until the May vacation shift decoupled occupancy.
+      </p>
+
+      <div style="background: var(--bg-surface); border: 1px solid var(--line-color); padding: 1.25rem; margin-top: 1rem;">
+        <div style="height: 380px;">
+          <canvas id="tempVsEnergyChart"></canvas>
+        </div>
+      </div>
+      <div class="figure-caption">
+        <strong>Fig. 3.1</strong> — Monthly average maximum ambient temperature (°C, red line) plotted against campus HT electricity consumption (Lakh kWh, blue bars) in 2019. The dramatic divergence in May reflects the vacation scheduling intervention. Sources: Open-Meteo Historical Archive & Energy Audit 2020.
+      </div>
+    </section>
+
+    <!-- Editorial Narrative & Live Snapshot -->
+    <div class="editorial-grid">
+      <div class="editorial-main">
+        <h2>2. Microclimate Drivers & Campus Heat Island Mitigation</h2>
+        <p>
+          Situated in the interior basin of Tamil Nadu surrounded by low granitic hills, Vellore experiences severe continental heat. With over 6.49 lakh square meters of built-up concrete surface, the campus would ordinarily generate a pronounced Urban Heat Island (UHI) effect.
+        </p>
+        <p>
+          Field measurements reported in the 2023 Green Audit demonstrate that VIT's urban forest (30,552 trees covering 18.69 acres, plus 1.19 lakh ornamental and medicinal shrubs) reduces ground-level shade temperatures by <strong>up to 3.0°C</strong> relative to peripheral asphalt roads.
+        </p>
+
+        <h3>Water-Energy Nexus in Campus Cooling</h3>
+        <p>
+          The 5,500 TR District Cooling System relies on evaporative cooling towers to reject condenser heat. Recognizing that regional groundwater is constrained, the university routes 100% of cooling tower make-up water from the campus Sewage Treatment Plants (STPs) rather than tapping freshwater borewells or the TWAD Cauvery pipeline. This closed loop consumes nearly 1,200 KLD of recycled tertiary effluent during peak summer.
+        </p>
+
+        <h3>Innovative Cooling: Gandhi Block as an ICAP Model</h3>
+        <p>
+          To move beyond energy-intensive vapour compression, the Mahatma Gandhi Block incorporates passive radiant slab cooling combined with Indirect Evaporative Cooling (IEC). By embedding chilled water pipes directly within structural floor slabs, thermal mass absorbs internal radiant heat without requiring high fan speeds. While standard split ACs consume <strong>97.48 kWh/m²/year</strong>, Gandhi Block operates at <strong>48.79 kWh/m²/year</strong>—a verified 50% power saving.
+        </p>
+      </div>
+
+      <!-- Live Climate & Air Quality Card -->
+      <aside class="editorial-sidebar">
+        <h3>Live Environmental Snapshot</h3>
+        <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 0.75rem;">
+          Cached telemetry from Open-Meteo for Katpadi (12.9692° N, 79.1559° E):
+        </p>
+        <div id="liveWeatherBox" style="background: var(--bg-surface); border: 1px solid var(--line-color); padding: 1rem; margin-bottom: 1.5rem;">
+          <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-faint); margin-bottom: 0.5rem;" id="weatherTimestamp">Loading climate data...</div>
+          <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5rem;">
+            <span style="font-size: 0.85rem;">Ambient Temperature:</span>
+            <span style="font-family: var(--font-mono); font-size: 1.3rem; font-weight: 600;" id="liveTemp">—</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5rem;">
+            <span style="font-size: 0.85rem;">Relative Humidity:</span>
+            <span style="font-family: var(--font-mono); font-size: 1.1rem;" id="liveHumidity">—</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5rem;">
+            <span style="font-size: 0.85rem;">Apparent Temp (Heat Index):</span>
+            <span style="font-family: var(--font-mono); font-size: 1.1rem;" id="liveApparent">—</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: baseline;">
+            <span style="font-size: 0.85rem;">Wind Speed (10m):</span>
+            <span style="font-family: var(--font-mono); font-size: 1rem;" id="liveWind">—</span>
+          </div>
+        </div>
+
+        <h3>Ambient Air Quality & Pollutants</h3>
+        <div class="data-table-container">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Parameter</th>
+                <th class="num-cell">Observed</th>
+                <th class="num-cell">CPCB Limit</th>
+              </tr>
+            </thead>
+            <tbody id="airQualityTableBody">
+              <tr><td>PM2.5</td><td class="num-cell" id="aqPm25">—</td><td class="num-cell">40 µg/m³</td></tr>
+              <tr><td>PM10</td><td class="num-cell" id="aqPm10">—</td><td class="num-cell">60 µg/m³</td></tr>
+              <tr><td>NO₂</td><td class="num-cell" id="aqNo2">—</td><td class="num-cell">40 µg/m³</td></tr>
+              <tr><td>SO₂</td><td class="num-cell" id="aqSo2">—</td><td class="num-cell">50 µg/m³</td></tr>
+              <tr><td>CO (8-hr)</td><td class="num-cell" id="aqCo">—</td><td class="num-cell">2.0 mg/m³</td></tr>
+              <tr><td>European AQI</td><td class="num-cell" id="aqAqi">—</td><td class="num-cell">Index</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="figure-caption">
+          <strong>Table 3.1</strong> — Ambient air parameters vs CPCB standards (TNPCB Consent Order 2307250173231). *Note: Ambient CO₂ ppm is not published by local weather sensors.
+        </div>
+      </aside>
+    </div>
+
+    <!-- Seasonal Monthly Climate Normals Table -->
+    <section style="margin-top: 2.5rem;">
+      <h2>3. Vellore Climate Normals (Monthly Temperature & Relative Humidity)</h2>
+      <div class="data-table-container">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Month</th>
+              <th class="num-cell">Mean Max Temp (°C)</th>
+              <th class="num-cell">Mean Min Temp (°C)</th>
+              <th class="num-cell">Mean Temp (°C)</th>
+              <th class="num-cell">Relative Humidity (%)</th>
+              <th class="num-cell">Precipitation (mm)</th>
+              <th>Campus Thermal Condition</th>
+            </tr>
+          </thead>
+          <tbody id="climateNormalsBody">
+            <!-- Populated via charts.js -->
+          </tbody>
+        </table>
+      </div>
+      <div class="figure-caption">
+        <strong>Table 3.2</strong> — Multi-year monthly climate normals for Katpadi/Vellore (12.969° N, 79.156° E). Source: Open-Meteo ERA5-Land reanalysis dataset.
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer-container"></div>
+  <script src="js/nav.js"></script>
+  <script src="js/charts.js"></script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+{
+  "source": "Green Audit Report (2023) pp. 10-25; Environmental Audit Report (2024) pp. 4, 13, 56; Student Field Notes",
+  "institution": "Vellore Institute of Technology (VIT)",
+  "location": {
+    "city": "Vellore",
+    "taluk": "Katpadi",
+    "district": "Vellore",
+    "state": "Tamil Nadu",
+    "pincode": "632014",
+    "coordinates": {
+      "lat": 12.9692,
+      "lng": 79.1559
+    }
+  },
+  "land_and_area": {
+    "total_campus_area_acres": 372,
+    "total_campus_area_sqm": 827746.85,
+    "built_up_area_sqm": 649393.0,
+    "greenery_area_sqm": 584005.0,
+    "maintained_green_lawn_trees_sqm": 431447.0,
+    "annual_greenery_maintenance_budget_inr": 40000000,
+    "dtcp_zoning": "Educational Use Zone"
+  },
+  "population": {
+    "total_students_enrolled": 39906,
+    "ug_pg_students": 36050,
+    "phd_scholars": 3856,
+    "teaching_faculty": 2538,
+    "foreign_faculty": 190,
+    "staff_strength_cto": 4744,
+    "hostel_residents": 21936,
+    "hostel_capacity": 30000
+  },
+  "hostels": {
+    "total_blocks": 32,
+    "boys_blocks": 21,
+    "girls_blocks": 11,
+    "active_occupancy": 21936,
+    "avg_occupancy_per_block": 685.5,
+    "total_toilets_in_hostels": 3372,
+    "amenities": [
+      "AC and Non-AC single/shared rooms",
+      "Solar water heaters with heat pump backup",
+      "Central steam cooking mess facilities & Chinese mess",
+      "24/7 security chaperone to Katpadi railway station",
+      "Separate clinics for boys and girls"
+    ]
+  },
+  "facilities_and_sports": {
+    "central_library": {
+      "area_sqm": 7770,
+      "floors": 6,
+      "total_books": 244575,
+      "back_volumes": 18350,
+      "print_journals": 412,
+      "ejournals_databases": 15053,
+      "ebooks": 364664,
+      "source": "Green Audit Report (2023), p. 22-23"
+    },
+    "food_court_sqm": 600,
+    "canteens_count": 7,
+    "canteen_locations": [
+      "G.D. Naidu Block",
+      "Silver Jubilee Tower",
+      "PRP Block",
+      "Gandhi Block",
+      "Technology Tower (Central)"
+    ],
+    "sports": {
+      "tennis_courts": 4,
+      "football_fields_count": 2,
+      "football_fields_area_sqm": 14594,
+      "stadium_area_sqm": 30000,
+      "basketball_courts": 4,
+      "swimming_pool": 1,
+      "squash_courts": 1,
+      "gym_parks": 2,
+      "snooker_rooms": 1
+    },
+    "auditoriums": [
+      {
+        "name": "Anna Auditorium",
+        "capacity": 1800,
+        "area_sqft": 15436,
+        "type": "Central AC Main Hall"
+      },
+      {
+        "name": "Dr. M. Channa Reddy Auditorium",
+        "capacity": 469,
+        "area_sqft": null,
+        "type": "Conference Hall"
+      },
+      {
+        "name": "Era Sezhiyan / Multi-purpose Hall (Gandhi Block)",
+        "capacity": 462,
+        "area_sqft": null,
+        "type": "Acoustic Hall"
+      },
+      {
+        "name": "Dr. Ambedkar Auditorium",
+        "capacity": 198,
+        "area_sqft": null,
+        "type": "Seminar Hall"
+      },
+      {
+        "name": "Kamaraj Auditorium",
+        "capacity": 128,
+        "area_sqft": null,
+        "type": "Seminar Hall"
+      }
+    ]
+  },
+  "high_consumption_and_emitter_zones": {
+    "power_hotspots": [
+      {
+        "code": "SMEC",
+        "name": "School of Mechanical Engineering",
+        "reason": "Thermal Engineering and Heat Transfer labs, IC engine test rigs"
+      },
+      {
+        "code": "SELECT",
+        "name": "School of Electrical Engineering",
+        "reason": "Heavy Machinery labs, high-current drives, smart grid testbeds"
+      },
+      {
+        "code": "CFM",
+        "name": "Centre for Functional Materials",
+        "reason": "High-temperature sintering furnaces, cleanroom processing, thin-film deposition"
+      },
+      {
+        "code": "CBST",
+        "name": "Centre for Bio-separation Technology",
+        "reason": "Centrifuges, chromatography units, ultra-low freezers (-80\u00b0C)"
+      },
+      {
+        "code": "TT",
+        "name": "Technology Tower",
+        "reason": "High-performance simulation software labs, multi-rack CAD/FEA servers"
+      },
+      {
+        "code": "PRP",
+        "name": "Pearl Research Park",
+        "reason": "Computational cluster research labs, data servers, centralized HVAC"
+      }
+    ],
+    "co2_emitter_labs": [
+      {
+        "code": "SMEC_LABS",
+        "name": "Automotive & IC Engine Labs (SMEC)",
+        "reason": "Direct fossil fuel combustion, engine dynamometer testing"
+      },
+      {
+        "code": "SCHEME_LABS",
+        "name": "Chemical & Process Engineering Lab (SMV/SCHEME)",
+        "reason": "Reaction vessels, pilot distillation columns, thermal processing"
+      }
+    ]
+  }
+}

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Hotspot Map | VIT Vellore</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
+  <style>
+    /* Map layout custom styles */
+    .map-container-wrapper {
+      position: relative;
+      border: 1px solid var(--line-color);
+      background: var(--bg-surface);
+      margin: 1.5rem 0 2rem;
+    }
+    #campusMap {
+      height: 620px;
+      width: 100%;
+      background-color: #f2efe9;
+    }
+    .map-toolbar {
+      padding: 0.85rem 1rem;
+      background: var(--bg-subtle);
+      border-bottom: 1px solid var(--line-color);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+    .time-slider-controls {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+    }
+    .slider-btn {
+      background: var(--bg-surface);
+      border: 1px solid var(--line-dark);
+      padding: 0.25rem 0.65rem;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      cursor: pointer;
+      border-radius: 2px;
+    }
+    .slider-btn:hover {
+      background: #eae7df;
+    }
+    .slider-month-label {
+      font-weight: 600;
+      color: var(--accent-navy);
+      min-width: 90px;
+    }
+    .layer-legend-drawer {
+      padding: 0.85rem 1rem;
+      background: var(--bg-surface);
+      border-top: 1px solid var(--line-color);
+      font-size: 0.8rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+    .legend-indicator {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-right: 1rem;
+    }
+    .legend-swatch {
+      width: 14px;
+      height: 14px;
+      display: inline-block;
+      border-radius: 2px;
+    }
+    .swatch-measured {
+      background: #183358;
+      border: 1.5px solid #0f213a;
+    }
+    .swatch-modelled {
+      background: #d97706;
+      border: 1.5px dashed #78350f;
+    }
+    .swatch-emitter {
+      background: #dc2626;
+      border: 1.5px solid #991b1b;
+    }
+    .swatch-sink {
+      background: #15803d;
+      border: 1.5px solid #14532d;
+    }
+    /* Custom Leaflet Tooltip & Popup */
+    .leaflet-popup-content-wrapper {
+      border-radius: 2px;
+      font-family: var(--font-sans);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+      border: 1px solid #d4d0c5;
+    }
+    .leaflet-popup-content {
+      margin: 0.85rem 1rem;
+      line-height: 1.45;
+      font-size: 0.85rem;
+    }
+    .popup-title {
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+      color: #1a1a1a;
+      border-bottom: 1px solid #e5e2da;
+      padding-bottom: 0.25rem;
+    }
+    .popup-badge {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      padding: 0.1rem 0.35rem;
+      border-radius: 2px;
+      display: inline-block;
+      margin-bottom: 0.4rem;
+    }
+    .popup-badge.measured {
+      background: #eef2f7;
+      color: #183358;
+      border: 1px solid #183358;
+    }
+    .popup-badge.modelled {
+      background: #fffbeb;
+      color: #92400e;
+      border: 1px dashed #b45309;
+    }
+    .popup-detail {
+      margin: 0.25rem 0;
+      font-size: 0.82rem;
+    }
+    .popup-source {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: #666;
+      margin-top: 0.4rem;
+      border-top: 1px dotted #ccc;
+      padding-top: 0.3rem;
+    }
+  </style>
+</head>
+<body data-page-id="nav-map">
+  <div id="site-header-container"></div>
+
+  <main class="main-wrapper">
+    <div class="section-label">Section 05 — Geospatial Investigation</div>
+    <h1>Campus Environmental Hotspot & Infrastructure Map</h1>
+
+    <div class="lead-paragraph">
+      "Interactive cartographic visualisation of VIT Vellore (372 acres). Switch basemaps, toggle domain layers, inspect modelled lab intensities vs metered powerhouses, and scrub through the 2019–2021 monthly timeline to observe demand variations."
+    </div>
+
+    <!-- Map Container -->
+    <div class="map-container-wrapper">
+      <div class="map-toolbar">
+        <div class="time-slider-controls">
+          <button id="playBtn" class="slider-btn" aria-label="Play timeline animation">▶ Play</button>
+          <button id="resetBtn" class="slider-btn" aria-label="Reset timeline">↺ Reset</button>
+          <span class="slider-month-label" id="currentMonthLabel">Jan 2019</span>
+          <input type="range" id="timeSlider" min="0" max="29" value="0" step="1" style="width: 180px; accent-color: var(--accent-navy);" aria-label="Month timeline slider">
+        </div>
+
+        <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">
+          Coordinates: <span id="hoverCoords">12.9692° N, 79.1559° E</span> | Zoom: <span id="currentZoom">16</span>
+        </div>
+      </div>
+
+      <div id="campusMap"></div>
+
+      <div class="layer-legend-drawer">
+        <div>
+          <span class="legend-indicator"><span class="legend-swatch swatch-measured"></span> <strong>Measured Node</strong> (Substation / Feeder)</span>
+          <span class="legend-indicator"><span class="legend-swatch swatch-modelled"></span> <strong>Modelled Estimate</strong> (Connected Load)</span>
+          <span class="legend-indicator"><span class="legend-swatch swatch-emitter"></span> <strong>Direct CO₂ / Heat Emitter</strong></span>
+          <span class="legend-indicator"><span class="legend-swatch swatch-sink"></span> <strong>Carbon Sink / Water Recycler</strong></span>
+        </div>
+        <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-faint);">
+          *Modelled markers are represented with dashed outlines.
+        </div>
+      </div>
+    </div>
+
+    <!-- Map Instructions & Methodology Details -->
+    <div class="editorial-grid">
+      <div class="editorial-main">
+        <h2>1. Cartographic Layer Guide & Sourced Nodes</h2>
+        <p>
+          The map features 7 toggleable domain layers available in the top-right layer controller:
+        </p>
+        <ul style="padding-left: 1.25rem; line-height: 1.7; font-size: 0.9rem;">
+          <li><strong>⚡ Electricity Load:</strong> Proportional circles reflecting estimated instantaneous kW and powerhouse kVA capacity. Scales dynamically with the 2019–2021 month timeline.</li>
+          <li><strong>🌡️ Microclimate / Temperature:</strong> Highlights thermal differences across the campus: -3°C vegetative shade canopy around academic avenues vs hot tarmac zones (SMEC heavy bays, outdoor sports complex).</li>
+          <li><strong>💨 CO₂ Point Emitters & Sinks:</strong> Pinpoints point sources of combustion (Automotive & IC Engine labs at SMEC, SCHEME Chemical Process Lab, 31 DG exhaust stacks) juxtaposed against vegetative sinks (18.69-acre canopy absorbing 1,869 t CO₂/yr).</li>
+          <li><strong>🏢 Hostels (32 Blocks):</strong> Men's Hostels (South & North high-rises) and Ladies' Hostels, documenting resident density, toilet infrastructure, and sanitary waste handling.</li>
+          <li><strong>🔬 Labs & Academic Blocks:</strong> Classrooms and research facilities (TT, PRP, SJT, Gandhi Block, CDMM, CBMR).</li>
+          <li><strong>🔌 Transformers & Substations:</strong> 33/11 kV main substation and 12 powerhouse stations.</li>
+          <li><strong>🌱 Renewables & District Cooling:</strong> Rooftop solar PV installations (2.113 MWp / 2,813 kWp), 5,500 TR district chiller plants, biogas digestor (300 m³), and solar hot water arrays.</li>
+        </ul>
+
+        <h2>2. Visual Demarcation: Measured vs Modelled</h2>
+        <p>
+          In rigorous compliance with academic research standards, measured data points are visually distinguished from modelled approximations:
+        </p>
+        <ul style="padding-left: 1.25rem; line-height: 1.7; font-size: 0.9rem;">
+          <li><span class="badge-tag measured">Solid Border [Measured]</span>: Data originating directly from TANGEDCO utility revenue meters, 33 kV incoming CT/PT logs, or certified audit testing.</li>
+          <li><span class="badge-tag estimate">Dashed Border [Modelled Estimate]</span>: Building and lab-level electrical allocations derived mathematically from connected transformer ratings, known machine wattage, floor areas, and student population densities. Full formulas are catalogued on the <a href="methods.html" style="color: var(--accent-navy);">Methods page</a>.</li>
+        </ul>
+      </div>
+
+      <!-- Quick Hotspot Index Sidebar -->
+      <aside class="editorial-sidebar">
+        <h3>Critical Campus Hotspots</h3>
+        <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 0.75rem;">
+          Click any node below to pan the map directly:
+        </p>
+        <div style="display: flex; flex-direction: column; gap: 0.5rem;" id="quickHotspotList">
+          <!-- Populated by map.js -->
+        </div>
+
+        <h3 style="margin-top: 2rem;">Basemap Providers</h3>
+        <p style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.45;">
+          Switch between <strong>Plain Light (CartoDB Positron)</strong> for clean report reading, <strong>OpenStreetMap Standard</strong> for building geometry, and <strong>Esri World Imagery</strong> for high-resolution satellite confirmation of rooftop solar arrays and tree density.
+        </p>
+      </aside>
+    </div>
+
+    <!-- Footnotes Section -->
+    <section class="footnotes-section">
+      <div class="section-label">Geospatial Data Notes</div>
+      <ol>
+        <li id="fn1"><strong>Geocoding Sources:</strong> Building coordinates originate from OpenStreetMap (OSM) Katpadi node queries and ground verification. Outlying or uncatalogued facilities are placed using official campus estate layouts and marked as "approx. location".</li>
+        <li id="fn2"><strong>Dynamic Timeline Scaling:</strong> When scrubbing the month slider, the Electricity layer radii modulate proportionally to total campus billing kWh recorded in that respective month (from 4.69M units peak in Apr 2019 down to 3.67L units in Apr 2020).</li>
+      </ol>
+    </section>
+  </main>
+
+  <div id="site-footer-container"></div>
+  <script src="js/nav.js"></script>
+  <script src="js/map.js"></script>
+</body>
+</html>

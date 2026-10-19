@@ -1,0 +1,371 @@
+{
+  "source": "Energy Audit Report (2020), pp. 4-6; Green Audit Report (2023), p. 47",
+  "tariff_category": "HT Tariff 1A (TANGEDCO/TNPDCL)",
+  "sanctioned_demand_kw": 9000,
+  "voltage_kv": 33,
+  "footnote_april_2019": "The narrative text in Energy Audit p. 4 refers to ~40 lakh units during April 2019 peak, but the recorded billing meter table confirms 46,88,760 HT units with 8,756.4 kVA peak demand. The table's verified metered figure is retained.",
+  "records": [
+    {
+      "month": "2019-01",
+      "year": 2019,
+      "month_name": "Jan",
+      "ht_units_kwh": 2039280,
+      "max_demand_kva": 5533.2,
+      "bill_amount_inr": 16195685.0,
+      "status": "Normal Academic Semester"
+    },
+    {
+      "month": "2019-02",
+      "year": 2019,
+      "month_name": "Feb",
+      "ht_units_kwh": 3342120,
+      "max_demand_kva": 7598.4,
+      "bill_amount_inr": 24664385.0,
+      "status": "Spring Semester"
+    },
+    {
+      "month": "2019-03",
+      "year": 2019,
+      "month_name": "Mar",
+      "ht_units_kwh": 4059120,
+      "max_demand_kva": 8570.4,
+      "bill_amount_inr": 29958182.0,
+      "status": "Summer AC load ramp-up"
+    },
+    {
+      "month": "2019-04",
+      "year": 2019,
+      "month_name": "Apr",
+      "ht_units_kwh": 4688760,
+      "max_demand_kva": 8756.4,
+      "bill_amount_inr": 34413114.0,
+      "status": "Peak Annual Demand (Extreme AC usage; partial load shedding 15 days)"
+    },
+    {
+      "month": "2019-05",
+      "year": 2019,
+      "month_name": "May",
+      "ht_units_kwh": 1759680,
+      "max_demand_kva": 6421.2,
+      "bill_amount_inr": 12294040.0,
+      "status": "Shifted Summer Vacation (exams ended May 25, saved ~20 lakh units)"
+    },
+    {
+      "month": "2019-06",
+      "year": 2019,
+      "month_name": "Jun",
+      "ht_units_kwh": 1479960,
+      "max_demand_kva": 4200.0,
+      "bill_amount_inr": 8056050.0,
+      "status": "Summer Vacation (Lowest demand)"
+    },
+    {
+      "month": "2019-07",
+      "year": 2019,
+      "month_name": "Jul",
+      "ht_units_kwh": 2885280,
+      "max_demand_kva": 7992.0,
+      "bill_amount_inr": 17431988.0,
+      "status": "Fall Semester Reopening"
+    },
+    {
+      "month": "2019-08",
+      "year": 2019,
+      "month_name": "Aug",
+      "ht_units_kwh": 3970320,
+      "max_demand_kva": 8223.6,
+      "bill_amount_inr": 24717193.0,
+      "status": "Full Campus Occupancy"
+    },
+    {
+      "month": "2019-09",
+      "year": 2019,
+      "month_name": "Sep",
+      "ht_units_kwh": 3828600,
+      "max_demand_kva": 8197.2,
+      "bill_amount_inr": 25774858.0,
+      "status": "Full Campus Occupancy"
+    },
+    {
+      "month": "2019-10",
+      "year": 2019,
+      "month_name": "Oct",
+      "ht_units_kwh": 3468480,
+      "max_demand_kva": 7976.4,
+      "bill_amount_inr": 25284250.0,
+      "status": "Fest Season (Riviera/GraVITas)"
+    },
+    {
+      "month": "2019-11",
+      "year": 2019,
+      "month_name": "Nov",
+      "ht_units_kwh": 3414360,
+      "max_demand_kva": 6699.6,
+      "bill_amount_inr": 24023453.0,
+      "status": "Pre-Exam Period"
+    },
+    {
+      "month": "2019-12",
+      "year": 2019,
+      "month_name": "Dec",
+      "ht_units_kwh": 2226120,
+      "max_demand_kva": 5793.6,
+      "bill_amount_inr": 15697790.0,
+      "status": "Winter Break / Lower AC requirement"
+    },
+    {
+      "month": "2020-01",
+      "year": 2020,
+      "month_name": "Jan",
+      "ht_units_kwh": 2777640,
+      "max_demand_kva": 5952.0,
+      "bill_amount_inr": 19968584.0,
+      "status": "Winter Semester"
+    },
+    {
+      "month": "2020-02",
+      "year": 2020,
+      "month_name": "Feb",
+      "ht_units_kwh": 3048600,
+      "max_demand_kva": 6879.6,
+      "bill_amount_inr": 21378590.0,
+      "status": "Academic Activities"
+    },
+    {
+      "month": "2020-03",
+      "year": 2020,
+      "month_name": "Mar",
+      "ht_units_kwh": 2185080,
+      "max_demand_kva": 7490.4,
+      "bill_amount_inr": 16625803.0,
+      "status": "COVID Lockdown initiated mid-March"
+    },
+    {
+      "month": "2020-04",
+      "year": 2020,
+      "month_name": "Apr",
+      "ht_units_kwh": 367680,
+      "max_demand_kva": 836.4,
+      "bill_amount_inr": 3188132.0,
+      "status": "Complete Lockdown (Baseload only)"
+    },
+    {
+      "month": "2020-05",
+      "year": 2020,
+      "month_name": "May",
+      "ht_units_kwh": 445920,
+      "max_demand_kva": 1054.8,
+      "bill_amount_inr": 4129207.0,
+      "status": "Lockdown"
+    },
+    {
+      "month": "2020-06",
+      "year": 2020,
+      "month_name": "Jun",
+      "ht_units_kwh": 492360,
+      "max_demand_kva": 1237.2,
+      "bill_amount_inr": 4233427.0,
+      "status": "Lockdown / Essential staff"
+    },
+    {
+      "month": "2020-07",
+      "year": 2020,
+      "month_name": "Jul",
+      "ht_units_kwh": 448920,
+      "max_demand_kva": 1106.4,
+      "bill_amount_inr": 3936185.0,
+      "status": "Online Instruction Period"
+    },
+    {
+      "month": "2020-08",
+      "year": 2020,
+      "month_name": "Aug",
+      "ht_units_kwh": 444240,
+      "max_demand_kva": 996.0,
+      "bill_amount_inr": 3989962.0,
+      "status": "Online Instruction Period"
+    },
+    {
+      "month": "2020-09",
+      "year": 2020,
+      "month_name": "Sep",
+      "ht_units_kwh": 467760,
+      "max_demand_kva": 1392.0,
+      "bill_amount_inr": 3979444.0,
+      "status": "Online Instruction Period"
+    },
+    {
+      "month": "2020-10",
+      "year": 2020,
+      "month_name": "Oct",
+      "ht_units_kwh": 484080,
+      "max_demand_kva": 1357.2,
+      "bill_amount_inr": 4016038.0,
+      "status": "Online Instruction Period"
+    },
+    {
+      "month": "2020-11",
+      "year": 2020,
+      "month_name": "Nov",
+      "ht_units_kwh": 455160,
+      "max_demand_kva": 1342.8,
+      "bill_amount_inr": 5559143.0,
+      "status": "Online Instruction Period"
+    },
+    {
+      "month": "2020-12",
+      "year": 2020,
+      "month_name": "Dec",
+      "ht_units_kwh": 456960,
+      "max_demand_kva": 1544.4,
+      "bill_amount_inr": 5725171.0,
+      "status": "Minimal Campus Operation"
+    },
+    {
+      "month": "2021-01",
+      "year": 2021,
+      "month_name": "Jan",
+      "ht_units_kwh": 464040,
+      "max_demand_kva": 1501.2,
+      "bill_amount_inr": 5553813.0,
+      "status": "Continued Remote Instruction"
+    },
+    {
+      "month": "2021-02",
+      "year": 2021,
+      "month_name": "Feb",
+      "ht_units_kwh": 409320,
+      "max_demand_kva": 1623.6,
+      "bill_amount_inr": 5483212.0,
+      "status": "Remote Instruction"
+    },
+    {
+      "month": "2021-03",
+      "year": 2021,
+      "month_name": "Mar",
+      "ht_units_kwh": 569880,
+      "max_demand_kva": 1694.4,
+      "bill_amount_inr": 6650163.0,
+      "status": "Partial Lab Resumption"
+    },
+    {
+      "month": "2021-04",
+      "year": 2021,
+      "month_name": "Apr",
+      "ht_units_kwh": 517920,
+      "max_demand_kva": 1752.0,
+      "bill_amount_inr": 5835308.0,
+      "status": "Second Wave Restrictions"
+    },
+    {
+      "month": "2021-05",
+      "year": 2021,
+      "month_name": "May",
+      "ht_units_kwh": 407280,
+      "max_demand_kva": 927.6,
+      "bill_amount_inr": 4206681.0,
+      "status": "Second Wave Summer"
+    },
+    {
+      "month": "2021-06",
+      "year": 2021,
+      "month_name": "Jun",
+      "ht_units_kwh": 374520,
+      "max_demand_kva": 1443.6,
+      "bill_amount_inr": 4076467.3,
+      "status": "Vacation / Low demand"
+    }
+  ],
+  "subsequent_post_covid_months": [
+    {
+      "month": "2022-06",
+      "year": 2022,
+      "month_name": "Jun",
+      "ht_units_kwh": 2410320
+    },
+    {
+      "month": "2022-07",
+      "year": 2022,
+      "month_name": "Jul",
+      "ht_units_kwh": 2895720
+    },
+    {
+      "month": "2022-08",
+      "year": 2022,
+      "month_name": "Aug",
+      "ht_units_kwh": 3809160
+    },
+    {
+      "month": "2022-09",
+      "year": 2022,
+      "month_name": "Sep",
+      "ht_units_kwh": 3971280
+    },
+    {
+      "month": "2022-10",
+      "year": 2022,
+      "month_name": "Oct",
+      "ht_units_kwh": 3393480
+    },
+    {
+      "month": "2022-11",
+      "year": 2022,
+      "month_name": "Nov",
+      "ht_units_kwh": 3465000
+    },
+    {
+      "month": "2022-12",
+      "year": 2022,
+      "month_name": "Dec",
+      "ht_units_kwh": 2712960
+    },
+    {
+      "month": "2023-01",
+      "year": 2023,
+      "month_name": "Jan",
+      "ht_units_kwh": 2866440
+    },
+    {
+      "month": "2023-02",
+      "year": 2023,
+      "month_name": "Feb",
+      "ht_units_kwh": 3134400
+    },
+    {
+      "month": "2023-03",
+      "year": 2023,
+      "month_name": "Mar",
+      "ht_units_kwh": 4045200
+    },
+    {
+      "month": "2023-04",
+      "year": 2023,
+      "month_name": "Apr",
+      "ht_units_kwh": 4465200
+    },
+    {
+      "month": "2023-05",
+      "year": 2023,
+      "month_name": "May",
+      "ht_units_kwh": 4260240
+    },
+    {
+      "month": "2023-06",
+      "year": 2023,
+      "month_name": "Jun",
+      "ht_units_kwh": 3767640
+    },
+    {
+      "month": "2023-07",
+      "year": 2023,
+      "month_name": "Jul",
+      "ht_units_kwh": 3443160
+    },
+    {
+      "month": "2023-08",
+      "year": 2023,
+      "month_name": "Aug",
+      "ht_units_kwh": 4124760
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "source": "Tamil Nadu Electricity Regulatory Commission (TNERC) Tariff Order for TNPDCL / TANGEDCO; Central Electricity Authority (CEA) CO2 Baseline Database (Ver 19, 2023)",
+  "tariff_classification": {
+    "category": "High Tension Tariff 1A (Educational Institutions)",
+    "demand_charge_inr_per_kva_month": 562.0,
+    "energy_charge_inr_per_kwh": 6.75,
+    "tod_peak_hour_surcharge": "20% extra (06:00-09:00 and 18:00-21:00)",
+    "tod_night_incentive": "5% rebate (22:00-05:00)"
+  },
+  "grid_emissions_comparison": {
+    "audit_report_applied_factor_kg_co2_per_kwh": 0.813,
+    "energy_audit_2020_implied_factor_kg_co2_per_kwh": 0.91,
+    "cea_southern_regional_grid_weighted_avg_kg_co2_per_kwh": 0.716,
+    "cea_national_grid_weighted_avg_kg_co2_per_kwh": 0.727,
+    "tamil_nadu_renewable_generation_share_pct": 21.4,
+    "citation": "Central Electricity Authority (CEA), Ministry of Power, Govt. of India: CO2 Baseline Database for the Indian Power Sector, Version 19.0 (November 2023)"
+  }
+}
